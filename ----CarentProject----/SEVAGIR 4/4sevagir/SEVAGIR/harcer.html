@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input{
+            margin: 10px;
+        }
+        table.td{
+
+        }
+        td{
+            width: 200px;
+            height: 20px;
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+<!--//harc remove aler-->
+<!--let massege = alert("Please enter book title or auther name");-->
+<!--clearTimeout(massege,2000);-->
+
+<hr>
+<table style="border: 1px solid black">
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+<!--<div id="isOutput"></div>-->
+<form id="regForm">
+    <div class="form-row">
+        <div class="offset-md-3 my-1 col-md-6">
+            <button type="button" class="btn btn-secondary reg-log-btn" id="regBtn">Registration</button>
+            <button type="button" class="btn btn-secondary reg-log-btn" id="logBtn">Login</button>
+        </div>
+        <div id="regBtnForm" class="w-100">
+            <div class="offset-md-3 my-2 col-md-6">
+                <input type="text" class="form-control" placeholder="First name" id="fname">
+            </div>
+            <div class="offset-md-3 my-2 col-md-6">
+                <input type="text" class="form-control" placeholder="Last name" id="lname">
+            </div>
+            <div class="form-group offset-md-3 my-2 col-md-6">
+                <input type="email" class="form-control" placeholder="Email" id="emale">
+            </div>
+            <div class="form-group offset-md-3 my-2 col-md-6">
+                <input type="password" class="form-control" placeholder="Password" id="password">
+            </div>
+            <div class="form-group offset-md-3 my-2 col-md-6">
+                <input type="text" class="form-control" placeholder="Address ex. 1234 Main St" id="address">
+            </div>
+            <div class="form-group offset-md-3 my-2 col-md-6">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Female">
+                    <label class="form-check-label" for="inlineRadio1">Female</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Male">
+                    <label class="form-check-label" for="inlineRadio2">Male</label>
+                </div>
+            </div>
+            <div class="form-group offset-md-3 my-2 col-md-6">
+                <select class="custom-select" id="inlineFormCustomSelectPref">
+                    <option>Choose program...</option>
+                    <option value="1">HTML</option>
+                    <option value="2">CSS</option>
+                    <option value="3">JavaScript</option>
+                    <option value="4">PHP</option>
+                    <option value="5">SQL</option>
+                </select>
+            </div>
+            <div class="form-group offset-md-3 my-2 col-md-6">
+                <button type="button" class="btn btn-secondary btn-lg btn-block" id="btnReg">Sign in</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script>
+
+     let fname = document.getElementById("fname");
+     let lname = document.getElementById("lname");
+     let emale = document.getElementById("emale");
+     let password = document.getElementById("password");
+     let address = document.getElementById("address");
+     let btnReg = document.getElementById("btnReg");
+     function funGender(){
+         if (inlineRadio1.checked === true){
+             console.log("aaa");
+             return inlineRadio1.value
+         }
+         if(inlineRadio2.checked === true){
+             return inlineRadio2.value
+         }
+     }
+     let tds = document.getElementsByTagName("td");
+
+     // let gender = funGender();
+     // console.log(gender);
+
+     // let female = inlineRadio1.onclick = function(){
+     //     return this.value };
+     // let male = inlineRadio2.onclick = function(){
+     //     return this.value };
+     // let gender = female || male;
+     // let gender = female || male;
+     btnReg.onclick = function(){
+        fname = fname.value;
+        lname = lname.value;
+        emale = emale.value;
+        password = password.value;
+        address = address.value;
+        let gender = funGender();
+        // let genders= document.getElementsByName("inlineRadioOptions");
+        // function gender() {
+        //   // inlineRadio1.onclick =()=> this.value;
+        //   // inlineRadio2.onclick =()=> this.value;
+        // return genders[0].checked ? genders[0].value :
+        //     genders[1].checked ? genders[1].value :
+        //          alert("Plese ")
+        // }
+        //  console.log(gender);
+
+         /*console.log(fname);
+         console.log(lname);
+         console.log(address);*/
+
+        if (fname && lname && emale && password && address){
+            localStorage.setItem("gender",gender);
+            localStorage.setItem("address",address);
+            localStorage.setItem("password",password);
+            localStorage.setItem("emale",emale);
+            localStorage.setItem("lname",lname);
+            localStorage.setItem("fname",fname);
+
+        }
+         for (let i=0;i<localStorage.length;i++){
+             let key = localStorage.key(i);
+             let value = localStorage.getItem(key);
+             console.log(value);
+             tds[i].innerHTML=value
+         }
+         // location.reload();
+     };
+
+
+     // result.innerHTML = localStorage.getItem("fname")
+
+
+     // fname.oninput = function() {
+     //     result.innerHTML = fname.value;
+     // };
+
+
+     //selected
+     // let selected = Array.from(select.options)
+     //     .filter(option => option.selected)
+     //     .map(option => option.value);
+
+
+
+    //let key = target.input();
+    // console.log(key)
+    // localStorage.setItem("name","Volo");
+    // localStorage.setItem("age","30");
+    // console.log(localStorage.getItem("age"));//30
+    // console.log(localStorage.key(1));//name
+    // console.log(localStorage)
+
+// function Rabbit(){this.name="hi"}
+// let rabbit = new Rabbit();
+//
+// // changed the prototype
+// Rabbit.prototype = {};
+// console.log(rabbit);
+// // ...not a rabbit any more!
+// alert( rabbit instanceof Rabbit );
+
+// class CoffeeMachine {
+//
+//     #waterAmount = 0;
+//
+//     get waterAmount() {
+//         return this.#waterAmount;
+//     }
+//
+//     set waterAmount(value) {
+//         if (value < 0) throw new Error("Negative water");
+//         this.#waterAmount = value;
+//     }
+// }
+//
+// let machine = new CoffeeMachine();
+//
+// machine.waterAmount = 100;
+// console.log(machine);
+// // console.log(machine.#waterAmount);
+
+//
+// class PowerArray extends Array {
+//     isEmpty() {
+//         return this.length === 0;
+//     }
+//
+//     // built-in methods will use this as the constructor
+//     static get [Symbol.species]() {
+//         return Array;
+//     }
+// }
+//
+// let arr = new PowerArray(1, 2, 5, 10, 50);
+// alert(arr.isEmpty()); // false
+//
+// // filter creates new array using arr.constructor[Symbol.species] as constructor
+// let filteredArr = arr.filter(item => item >= 10);
+//
+// // filteredArr is not PowerArray, but Array
+// alert(filteredArr.isEmpty());
+
+//     let sayHiMixin = {
+//         sayHi() {
+//             alert(`Hello ${this.name}`);
+//         },
+//         sayBye() {
+//             alert(`Bye ${this.name}`);
+//         }
+//     };
+//
+//     // usage:
+//     class User {
+//         constructor(name) {
+//             this.name = name;
+//         }
+//     }
+//
+//     // copy the methods
+//     let obj=Object.assign(User.prototype, sayHiMixin);
+//
+//     // now User can say hi
+//     new User("Dude").sayHi(); // Hello Dude!
+//     new User("Dude").sayBye();
+//     console.log(obj);
+//
+//     class Person extends User {
+//         // ...
+//     }
+// new Person("John").sayHi()
+
+
+    // let eventMixin = {
+    //     /**
+    //      * Subscribe to event, usage:
+    //      *  menu.on('select', function(item) { ... }
+    //      */
+    //     on(eventName, handler) {
+    //         if (!this._eventHandlers) this._eventHandlers = {};
+    //         if (!this._eventHandlers[eventName]) {
+    //             this._eventHandlers[eventName] = [];
+    //         }
+    //         this._eventHandlers[eventName].push(handler);
+    //     },
+    //
+    //     /**
+    //      * Cancel the subscription, usage:
+    //      *  menu.off('select', handler)
+    //      */
+    //     off(eventName, handler) {
+    //         let handlers = this._eventHandlers && this._eventHandlers[eventName];
+    //         if (!handlers) return;
+    //         for (let i = 0; i < handlers.length; i++) {
+    //             if (handlers[i] === handler) {
+    //                 handlers.splice(i--, 1);
+    //             }
+    //         }
+    //     },
+    //
+    //     /**
+    //      * Generate an event with the given name and data
+    //      *  this.trigger('select', data1, data2);
+    //      */
+    //     trigger(eventName, ...args) {
+    //         if (!this._eventHandlers || !this._eventHandlers[eventName]) {
+    //             return; // no handlers for that event name
+    //         }
+    //
+    //         // call the handlers
+    //         this._eventHandlers[eventName].forEach(handler => handler.apply(this, args));
+    //     }
+    // };
+    // class Menu {
+    //     choose(value) {
+    //         this.trigger("select", value);
+    //     }
+    // }
+    // // Add the mixin with event-related methods
+    // Object.assign(Menu.prototype, eventMixin);
+    //
+    // let menu = new Menu();
+    //
+    // // add a handler, to be called on selection:
+    // menu.on("select", value => alert(`Value selected: ${value}`));
+    //
+    // // triggers the event => the handler above runs and shows:
+    // // Value selected: 123
+    // menu.choose("123");
+    //
+
+
+
+    // var argList = [
+    //     ["first test",1],
+    //     ["second test", [2]],
+    //     ["object test ! ", {myObjectIsHere : true}],
+    //     ["and my function ? ", function(){ return "hello challengers" }],
+    //     [" alll ??? ", [1,2,3,4], {here : true}, function(){return 1}],
+    //     [null]
+    // ];
+    // var answerList = [
+    //     "first test1",
+    //     "second test[2]",
+    //     "object test ! {\"myObjectIsHere\":true}",
+    //     "and my function ? function (){ return \"hello challengers\" }",
+    //     " alll ??? [1,2,3,4]{\"here\":true}function (){return 1}",
+    //     "null"
+    // ];
+    // class Console {
+    //     constructor(args,range) {
+    //         this.range=range;
+    //         this.args=args
+    //     }
+    //     log(args) {
+    //         return args+""
+    //     }
+    //     history(range) {
+    //         for (var i=0; i < this.argList.length; i++) {
+    //             range += this.args[i]
+    //         }
+    //         return range
+    //     }
+    //     clearHistory() {
+    //         this.range=null
+    //     }
+    // }
+    //
+    // var myConsole = new Console();
+    //
+    // for (var i = 0; i < argList.length; i++){
+    //     myConsole.log.apply(myConsole,argList[i])
+    // }
+    // myConsole.history([1,2]);
+    // Test.assertEquals(myConsole.history([2,3]), "second test[2]\nobject test ! {\"myObjectIsHere\":true}");
+    // Test.assertEquals(myConsole.history([3,2]), "object test ! {\"myObjectIsHere\":true}");
+    //
+    //
+
+
+
+    // function primeNumbers(num) {
+    //     let arr=[2];
+    //     if(num<=0)return 0;
+    //     for(let i=3; i<=num; i+=2){
+    //         if(arr.every(x => i % x !== 0)){
+    //             arr.push(i)
+    //         }
+    //     }return arr.length
+    // }
+    // console.log(primeNumbers(20))
+
+
+
+
+/* #chouseUser{
+            padding-top: 20%;
+        }
+
+
+        #start{
+            z-index: 2;
+            width: 1110px;
+            margin-left: 205px;
+        }
+        program
+        #program{
+            width: 80%;
+            margin: 100px auto;
+            height: 60%;
+            border: 1px solid;
+            display: none;
+     background-color: gainsboro;
+     font-size: 30px;
+     position: relative;
+     }
+     #program h2{
+         font-size: 30px;
+     }
+     #program input[type="checkbox"]{
+         width: 25px;
+         height: 25px;
+     }
+     #next,#prev{
+         position: absolute;
+         bottom: 35px;
+         right: 50px;
+         width: 100px;
+         padding: 5px;
+         font-size: 20px;
+     }
+     #prev{
+         left: 50px;
+     }
+
+<!--<div id="chouseUser">-->
+                    <!--<div class="d-flex justify-content-center">-->
+                        <!--<button id="student" type="button" class=" col-md-3 border btn btn-light btn-lg w-100 mx-2">Student</button>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+
+
+                <!--<button id="teacher" type="button" class=" col-md-3 border btn btn-light btn-lg w-100 mx-2">Teacher</button>-->
+
+                                <!--<th scope="col" style="width: 150px">New Student</th>-->
+
+<!--<tr id="trAdd">-->
+                            <!--<td scope="row"><input id="id" type="number" required  min="1"></td>-->
+                            <!--<td><input id="name" required type="text" ></td>-->
+                            <!--<td><select id="program" required>-->
+                            <!--<option value="HTML">HTML</option>-->
+                            <!--<option value="CSS">CSS</option>-->
+                            <!--<option value="JS">JS</option>-->
+                            <!--<option value="PHP">PHP</option>-->
+                            <!--<option value="SQL">SQL</option>-->
+                            <!--</select>-->
+                            <!--</td>-->
+                            <!--<td><select id="level" required>-->
+                            <!--<option value="one">1</option>-->
+                            <!--<option value="two">2</option>-->
+                            <!--<option value="three">3</option>-->
+                            <!--</select></td>-->
+                            <!--<td><input id="grade" required type="number" min="40" max="100" step="5" ></td>-->
+                            <!--<td><input id="add" type="submit"  value="Add" class="px-2" ></td>-->
+                            <!--</tr>-->
+
+
+                */
+
+     // teacher.onclick = function () {
+     //     courses.style.display="block";
+     //     chouseUser.style.display="none";
+     // };
+     // student.onclick = function () {
+     //     regForm.style.display = "block";
+     //     chouseUser.style.display="none";
+     // };
+
+
+     // levl.onclick = function () {
+     //     if(levl.value===value.level){
+     //         tbody.innerHTML = "";
+     //         for (let j=0;j<value.length;j++){
+     //              studentAddTable([value.id, value.fullName, value.program, value.level, value.grade]);
+     //
+     //         console.log(levl.value);
+     //     console.log(value.level)
+     //         }
+     //     }
+     // }
+
+     // levl.onclick = function () {
+     //     tbody.innerHTML = "";
+     //     if (levl.value !== "Level") {
+     //         for (let i=0; i<localStorage.length; i++) {
+     //             let key = localStorage.key(i);
+     //             let value = JSON.parse(localStorage.getItem(key));
+     //             if (levl.value === value.level) {
+     //                 studentAddTable([value.id, value.fullName, value.program, value.level, value.grade]);
+     //             }
+     //         }
+     //     }
+     //     // console.log(value)
+     //     // value.filter(x => x.value === value.level);
+     // };
+
+
+
+     // let objJsonParse = JSON.parse(localStorage.getItem(obj.id));
+     // console.log(objJsonParse);
+     //     for (let i=0; i<localStorage.length; i++){
+     //         let key = localStorage.key(i);
+     //         let value = localStorage.getItem(key);
+     //
+     //
+     //
+     //     }
+     //     console.log(tr);
+
+
+
+
+
+
+     // location.reload();
+
+     // console.log(fullName,address,level,gender);
+     // if (id && fullName && emale && address && password && program && level && grade && gender){
+     //     localStorage.setItem("id", id);
+     //     localStorage.setItem("fullName", fullName);
+     //     localStorage.setItem("emale", emale);
+     //     localStorage.setItem("password", password);
+     //     localStorage.setItem("address", address);
+     //     localStorage.setItem("program", program);
+     //     localStorage.setItem("level", level);
+     //     localStorage.setItem("grade", grade);
+     //     localStorage.setItem("gender", gender);
+     // } else {
+     //     alert("Please fill in all fields...!")
+     // }
+
+
+     // for (let i=0; i<localStorage.length; i++){
+     //     let key = localStorage.key(i);
+     //     let value = localStorage.getItem(key);
+     //     let td = document.createElement("td");
+     //
+     //     td.innerHTML = value;
+     //     tr.append(td);
+     // }
+     // console.log(tr);
+     //
+     // tbody.append(tr);
+     // location.reload();
+
+     //    /* //teacher add student
+     //     let id = document.getElementById("id");
+     //     let name = document.getElementById("name");
+     //     let program = document.getElementById("program");
+     //     let level = document.getElementById("level");
+     //     let grade = document.getElementById("grade");
+     //     let add = document.getElementById("add");
+     //
+     //     add.onclick = function(){
+     //         id = id.value;
+     //         name = name.value;
+     //         program  = program.value; //function
+     //         level = level.value; //function
+     //         grade = grade.value;
+     //
+     //         console.log(id,name,grade);
+     //
+     //         if (id && name && program && level && grade){
+     //             localStorage.setItem("id", id);
+     //             localStorage.setItem("name", name);
+     //             localStorage.setItem("program", program);
+     //             localStorage.setItem("level", level);
+     //             localStorage.setItem("grade", grade);
+     //
+     //         } else { alert("Please fill in all fields...!")}
+     //
+     //         let tr = document.createElement("tr");
+     //
+     //         for (let i=0; i<localStorage.length; i++){
+     //             let key = localStorage.key(i);
+     //             let value = localStorage.getItem(key);
+     //             let td = document.createElement("td");
+     //
+     //             td.innerHTML = value;
+     //             tr.append(td);
+     //         }
+     //         // tr.appendChild(table);
+     //         console.log(tr);
+     //
+     //         tbody.append(tr);
+     //         // location.reload();
+     //     };
+     // */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     // console.log(localStorage)
+
+
+
+
+
+     //result span
+     // let x=result.getElementsByTagName("span");
+     // console.log(x);
+     // x.onmouseover = function(event) {
+     //     let target = event.target;
+     //     console.log(target.id)
+     // };
+     // bookSearch.onclick = function (event) {
+     //     // let x=result.getElementsByTagName("span");
+     //     let result=document.getElementById("result");
+     //     console.log(result);
+     // };
+     // function find(event) {
+     //     let x=result.getElementsByTagName("span");   //[span,span...6 hat.]
+     //     for (let i=0;i<x.length;i++){
+     //         console.log(x);                   // 6hat         [span,span...6 hat.]
+     //          x[i].onmouseover = function () {
+     //             let target = event.target;
+     //             console.log(target);
+     //         // console.log(target.id)
+     //         };
+     //     }
+     // }
+     // find();
+     // x.onmouseover = function (event) {
+     //    console.log(event.target)
+     // }
+
+
+
+
+
+
+     // let bookSearch= document.getElementById("bookSearch");
+     // bookSearch.onclick = function () {
+     //     // let x=result.getElementsByTagName("span");
+     //     console.log("arach");
+     //
+     // };
+     // x.onmouseover = function (event) {
+     //     console.log(event.target.url)
+     // }
+
+     //     function f(event) {
+     //         let x=result.getElementsByTagName("span");   //[span,span....]
+     //         console.log(x);
+     //         for (let i=0;i<x.length;i++){
+     //             x[i].mouseover = function () {
+     //                 console.log(i)
+     //             };
+     //         }
+     //     }
+     // f();
+     // x.mouseover = function () {
+     //     console.log("arach")
+     // };
+     // console.log(x);
+
+
+
+
+     // function hide(event) {
+     //     event.target.style.visibility = 'hidden';
+     // }
+     // let bookTit= document.querySelector("#result");
+     //
+     // bookTit.addEventListener('mouseover ', hide, false);
+
+     //     bookTitle_h5.mouseover = function () {
+     //         console.log("arach")
+     //     }
+
+
+
+
+     // myLibCard.onclick = function () {
+     //     card.style.display = "none";
+     //     // console.log("arach");
+     //
+     // };
+     // result.onmouseover = function(event) {
+     //     let target = event.target;
+     //     if (target.tagName==="SPAN"){
+     //         let button = document.createElement("button");
+     //         let text = document.createTextNode("Add To Card");
+     //         button.append(text);
+     //         target.append(button);
+     //
+     //         // target.classList.add("targetSpan");
+     //         // target.style.background = 'black';
+     //     }
+     // };
+     // result.onmouseout = function(event) {
+     //     let target = event.target;
+     //     // target.classList.remove("targetSpan");
+     // };
+
+
+
+
+     <!--<script>-->
+     <!--myLibCard.onclick = function () {-->
+     <!--card.style.display = "none";-->
+     <!--// console.log("arach");-->
+
+     <!--};-->
+     <!--// let addToCard=document.getElementsByClassName("addToCard");-->
+     <!--// console.log(addToCard);-->
+
+
+     <!--result.onmouseover = function(event) {-->
+     <!--let target = event.target;-->
+     <!--if (target.tagName==="SPAN"){-->
+     <!--// console.log(target.id);-->
+     <!--// addToCard.style.display = "block"-->
+     <!--// target.classList.add("addToCard");-->
+     <!--//-->
+     <!--// let button = document.createElement("button");-->
+     <!--// let text = document.createTextNode("Add To Card");-->
+     <!--// button.append(text);-->
+     <!--// target.append(button);-->
+
+     <!--// target.style.background = 'black';-->
+     <!--}-->
+     <!--};-->
+     <!--result.onmouseout = function(event) {-->
+     <!--let target = event.target;-->
+     <!--// target.classList.remove("targetSpan");-->
+     <!--};-->
+
+
+
+     <!--// let result = document.getElementById("result");-->
+     <!--// let resulut_H5= result.getElementsByTagName("h5");-->
+     <!--// let addToCard=document.getElementsByClassName("addToCard");-->
+     <!--// console.log(resulut_H5);-->
+     <!--// resulut_H5.map(x=>x.onmouseover = function () {-->
+     <!--//     addToCard.style.display="block"-->
+     <!--// })-->
+     <!--// // ##result h5:hover{-->
+     <!--// //-->
+     <!--// // }:hover{-->
+     <!--//-->
+     <!--// // }-->
+     <!--</script>-->
+
+button.addEventListener("click", function() {
+console.log(i + JSON.stringify(img));
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

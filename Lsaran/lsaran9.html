@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //ex1
+    function greetingMaker(salutation) {
+        return function closure(name) {
+            return salutation + ", " + name
+        }
+    }
+
+    //ex2
+    function rps(s1, s2) {
+        if(s1===s2)return "TIE";
+        if(s1==="rock" && s2==="paper" || s1==="paper" && s2==="scissors" ||
+            s1==="scissors" && s2==="rock"){
+            return "Player 2 wins"
+        } return  "Player 1 wins"
+    }
+
+    //ex3
+    function group(arr, size) {
+        let newArr=[];
+        let arrCount=Math.ceil(arr.length/size) ;//3 hat
+        for(let i=0; i< arrCount; i++){
+            newArr.push([])
+        }                              // [Array(0), Array(0), Array(0)]
+        let j = 0;
+        while (arr.length && j <= arr.length){
+            // if (!arr.length){return newArr}
+            newArr[j].push(arr[0]);
+            arr.shift();
+            if(j < newArr.length-1 ){j++}
+            else{j = 0}
+        }
+        return newArr;
+    }
+    console.log(group([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],4));
+    console.log(group([1, 2, 3, 4], 2));
+    console.log(group([1, 2, 3, 4, 5, 6], 3));
+    console.log(group([1, 2, 3, 4, 5, 6, 7, 8], 2));
+
+//    ex4
+    function deleteOccurrences(arr,num) {
+        let newArr=[];
+        for (let i=0;i<arr.length;i++){
+            if (!newArr.includes(arr[i])){
+                newArr.push(arr[i])
+            } else {
+                if(newArr.filter(x=>x===arr[i]).length < num){
+                    newArr.push(arr[i])
+                }
+            }
+        }
+        return newArr
+    }
+
+//    ex5
+    function isMagicSquare(square) {
+        let newArr=[],sum=0;
+        for(let i=0;i<square.length;i++){
+            //row sum
+            newArr.push(square[i].reduce((a,b) => a+b));
+            //call sum
+            for (let j=0; j< square[i].length; j++){
+                sum += square[i][j]
+            }
+            newArr.push(sum);
+            sum=0;
+        }
+        return new Set(newArr).size === 1
+    }
+    console.log(isMagicSquare([[8, 1, 6],
+        [3, 5, 7],
+        [4, 9, 2]]))
+
+
+</script>
+</body>
+</html>

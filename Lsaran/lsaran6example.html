@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    console.log("_________________ex1_______________");
+    function makePlusFunction(m) {
+        return function plusFive(n){
+            return n += m
+        }
+    }
+    console.log(makePlusFunction(5)(2));
+
+    console.log("_________________ex2________________");
+    function add(m) {
+        return function(n){
+            return n + m
+        }
+    }
+    console.log(add(10)(20));
+
+    console.log("_________________ex3________________");
+    function days(month, year) {
+        return new Date(year, month,0).getDate()
+    }
+    console.log(days(2,2018));
+    console.log(days(4, 654));
+
+    console.log("_________________ex4________________");
+    let afterNDays = (days, n) => {
+        let day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        return days.map(x => day[(day.indexOf(x) + n) % 7]);
+    };
+    console.log(afterNDays(["Thursday", "Monday"], 4));
+
+    console.log("_________________ex4________________");
+    function afterNDays1(days, n) {
+        let day=["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+        return days.map(x => day.indexOf(x) + n < 7 ? day[day.indexOf(x) + n] :
+            day.indexOf(x) + n - 7 < 7 ? day[day.indexOf(x) + n - 7] : day[day.indexOf(x) + n - 7 - 7] )
+    }
+
+    console.log(afterNDays1(["Thursday", "Monday"], 4));
+
+    console.log("_________________ex5________________");
+    function caesarCipher(str,n){
+        str=str.split("");
+        return str.map(x => String.fromCharCode(x.charCodeAt() === 32 ? 32 : x.charCodeAt() === 45 ? 45 :
+            x.charCodeAt() + n >= 65 && x.charCodeAt() + n <= 122 ? x.charCodeAt() + n :
+                x.charCodeAt() + n - 122 + 96)).join("");
+    }
+    console.log(caesarCipher("middle-Outz", 2));
+    console.log(caesarCipher("Always-Look-on-the-Bright-Side-of-Life", 5));
+    console.log(caesarCipher("A friend in need is a friend indeed", 20)
+    );
+
+    console.log("_________________ex5________________");
+    function caesarCipher(str,n){
+        str=str.split("");
+        return str.map(x => String.fromCharCode(cheak(x,n))).join("")
+    }
+    function cheak(x,n){    //swich-case nman depqeri hamar
+        if (x.charCodeAt() === 32)  return  32;
+        if (x.charCodeAt() === 45) return 45;
+        if (x.charCodeAt() + n >= 65 && x.charCodeAt() + n <= 122) return x.charCodeAt() + n;
+        return x.charCodeAt() + n - 122 + 96
+    }
+    console.log(caesarCipher("middle-Outz", 2));
+    console.log(caesarCipher("Always-Look-on-the-Bright-Side-of-Life", 5));
+    console.log(caesarCipher("A friend in need is a friend indeed", 20))
+</script>
+</body>
+</html>

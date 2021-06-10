@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .notification {
+            position: fixed;
+            z-index: 1000;
+            padding: 5px;
+            border: 1px solid black;
+            font-size: 20px;
+            background: white;
+            text-align: center;
+        }
+
+        .welcome {
+            background: #b80000;
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+<pre>
+Methods to create new nodes:
+
+    <b>document.createElement(tag)</b> – creates an element with the given tag,
+    <b>document.createTextNode(value)</b> – creates a text node (rarely used),
+    <b>elem.cloneNode(deep)</b> – clones the element, if deep==true then with all descendants.
+Insertion and removal:
+
+    <b>node.append(...nodes or strings)</b> – insert into node, at the end,
+    <b>node.prepend(...nodes or strings)</b> – insert into node, at the beginning,
+    <b>node.before(...nodes or strings)</b> –- insert right before node,
+    <b>node.after(...nodes or strings)</b> –- insert right after node,
+    <b>node.replaceWith(...nodes or strings)</b> –- replace node.
+    <b>node.remove() </b>–- remove the node.
+Text strings are inserted “as text”.
+
+There are also “old school” methods:
+
+    <b>parent.appendChild(node)</b>
+    <b>parent.insertBefore(node, nextSibling)</b>
+    <b>parent.removeChild(node)</b>
+    <b>parent.replaceChild(newElem, node)</b>
+All these methods return node.
+
+Given some HTML in html, elem.insertAdjacentHTML(where, html) inserts it depending on the value of where:
+
+    <b>"beforebegin"</b> – insert html right before elem,
+    <b>"afterbegin" </b>– insert html into elem, at the beginning,
+    <b>"beforeend" </b>– insert html into elem, at the end,
+    <b>"afterend"</b> – insert html right after elem.
+Also there are similar methods, elem.insertAdjacentText and elem.insertAdjacentElement, that insert text strings and
+    elements, but they are rarely used.
+
+To append HTML to the page before it has finished loading:
+
+document.write(html)
+    After the page is loaded such a call erases the document. Mostly seen in old scripts
+<hr>
+
+    To manage classes, there are two DOM properties:
+
+<b>className</b> – the string value, good to manage the whole set of classes.
+<b>classList</b> – the object with methods add/remove/toggle/contains, good for individual classes.
+To change the styles:
+
+The style property is an object with camelCased styles. Reading and writing to it has the same meaning as modifying
+    individual properties in the "style" attribute. To see how to apply important and other rare stuff – there’s a
+    list of methods at MDN.
+
+The <b>style.cssText</b> property corresponds to the whole "style" attribute, the full string of styles.
+
+To read the resolved styles (with respect to all classes, after all CSS is applied and final values are calculated):
+
+The <b>getComputedStyle(elem, [pseudo])</b> returns the style-like object with them. Read-only.
+</pre>
+<script>
+    //Create a function clear(elem) that removes everything from the element.
+    function clear(elem) {
+        for (let i=0; i < elem.childNodes.length; i++) {
+            elem.childNodes[i].remove();
+        }
+    }
+
+//Write an interface to create a list from user input.
+
+    let ul = document.createElement('ul');
+    document.body.append(ul);
+
+    while (true) {
+        let data = prompt("Enter the text for the list item", "");
+
+        if (!data) {
+            break;
+        }
+
+        let li = document.createElement('li');
+        li.textContent = data;
+        ul.append(li);
+    }
+
+//creat list
+    let data = {
+        "Fish": {
+            "trout": {},
+            "salmon": {}
+        },
+
+        "Tree": {
+            "Huge": {
+                "sequoia": {},
+                "oak": {}
+            },
+            "Flowering": {
+                "apple tree": {},
+                "magnolia": {}
+            }
+        }
+    };
+
+    function createTree(container, obj) {
+        container.innerHTML = createTreeText(obj);
+    }
+
+    function createTreeText(obj) { // standalone recursive function
+        let li = '';
+        let ul;
+        for (let key in obj) {
+            li += '<li>' + key + createTreeText(obj[key]) + '</li>';
+        }
+        if (li) {
+            ul = '<ul>' + li + '</ul>'
+        }
+        return ul || '';
+    }
+
+    createTree(container, data);
+
+//    ^^^^^^^^^^^^^^^^^^^^
+    let data = {
+        "Fish": {
+            "trout": {},
+            "salmon": {}
+        },
+
+        "Tree": {
+            "Huge": {
+                "sequoia": {},
+                "oak": {}
+            },
+            "Flowering": {
+                "apple tree": {},
+                "magnolia": {}
+            }
+        }
+    };
+
+    function createTree(container, obj) {
+        container.append(createTreeDom(obj));
+    }
+
+    function createTreeDom(obj) {
+        // if there's no children, then the call returns undefined
+        // and the <ul> won't be created
+        if (!Object.keys(obj).length) return;
+
+        let ul = document.createElement('ul');
+
+        for (let key in obj) {
+            let li = document.createElement('li');
+            li.innerHTML = key;
+
+            let childrenUl = createTreeDom(obj[key]);
+            if (childrenUl) {
+                li.append(childrenUl);
+            }
+
+            ul.append(li);
+        }
+
+        return ul;
+    }
+
+    let container = document.getElementById('container');
+    createTree(container, data);
+
+
+//
+    function showNotification({top = 0, right = 0, className, html}) {
+
+        let notification = document.createElement('div');
+        notification.className = "notification";
+        if (className) {
+            notification.classList.add(className);
+        }
+
+        notification.style.top = top + 'px';
+        notification.style.right = right + 'px';
+
+        notification.innerHTML = html;
+        document.body.append(notification);
+
+        setTimeout(() => notification.remove(), 1500);
+    }
+
+    // test it
+    let i = 1;
+    setInterval(() => {
+        showNotification({
+            top: 10,
+            right: 10,
+            html: 'Hello ' + i++,
+            className: "welcome"
+        });
+    }, 2000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

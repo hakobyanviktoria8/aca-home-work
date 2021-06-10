@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c24dc602-cf75-4430-a351-b885f134e46b" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="recursive.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../jsExam/recursive.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="436">
+              <caret line="1612" column="10" selection-start-line="1609" selection-start-column="3" selection-end-line="1612" selection-end-column="10" />
+              <folding>
+                <element signature="e#22809#22841#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ToDoList.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../jsExam/ToDoList.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1427">
+              <caret line="169" lean-forward="true" selection-start-line="169" selection-end-line="169" />
+              <folding>
+                <element signature="e#1562#2256#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lsaran 8.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../JS-ACA HomeWork/lsaran 8.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="202">
+              <caret line="62" column="7" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jsarr.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../jsExam/jsarr.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="443">
+              <caret line="3464" column="5" selection-start-line="3464" selection-start-column="5" selection-end-line="3464" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Qnnutyun 2ACA.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../JS-ACA HomeWork/Qnnutyun 2ACA.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="562">
+              <caret line="810" lean-forward="true" selection-start-line="810" selection-end-line="810" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>next</find>
+      <find>prev</find>
+      <find>slideshow-container</find>
+      <find>dot</find>
+      <find>currentSlide</find>
+      <find>mySlides</find>
+      <find>slideIndex</find>
+      <find>w3-content</find>
+      <find>showSlides</find>
+      <find>fade</find>
+      <find>setTimeout(</find>
+      <find>bagua-table</find>
+      <find>(n</find>
+      <find>container</find>
+      <find>index</find>
+      <find>fibo</find>
+      <find>checkKey</find>
+      <find>chosenWine</find>
+      <find>String.prototype</find>
+      <find>prim</find>
+      <find />
+      <find>startsWith</find>
+      <find>leftShift</find>
+      <find>sum</find>
+      <find>myInput</find>
+      <find>btn</find>
+      <find>myUL</find>
+      <find>v</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>left</replace>
+      <replace>right</replace>
+      <replace>slide</replace>
+      <replace>container</replace>
+      <replace>slidesCarusel</replace>
+      <replace>table</replace>
+      <replace>index</replace>
+      <replace>cont-slide</replace>
+      <replace>keyDown</replace>
+      <replace>input</replace>
+      <replace>btn</replace>
+      <replace>list</replace>
+      <replace>x</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/carusel.html" />
+        <option value="$PROJECT_DIR$/carusel1.js" />
+        <option value="$PROJECT_DIR$/../../jsExam/sevagir.html" />
+        <option value="$PROJECT_DIR$/../../jsExam/sevagir1.html" />
+        <option value="$PROJECT_DIR$/../../jsExam/Bubbling.html" />
+        <option value="$PROJECT_DIR$/../../jsExam/CARUSEL2.html" />
+        <option value="$PROJECT_DIR$/CaruselJQuery.html" />
+        <option value="$PROJECT_DIR$/VerchinCarusel.html" />
+        <option value="$PROJECT_DIR$/../Project2CaruselFlowers/CaruselJQuery.html" />
+        <option value="$PROJECT_DIR$/../../jsExam/Karevor/Bubbling.html" />
+        <option value="$PROJECT_DIR$/carusel.css" />
+        <option value="$PROJECT_DIR$/carusel.js" />
+        <option value="$PROJECT_DIR$/CARUSEL2.html" />
+        <option value="$PROJECT_DIR$/Project2Carusel/CARUSEL2.html" />
+        <option value="$PROJECT_DIR$/Project2Carusel/ManeCarusel.html" />
+        <option value="$PROJECT_DIR$/Project2Carusel/carusel.js" />
+        <option value="$PROJECT_DIR$/../../jsExam/Karevor/sevagir.html" />
+        <option value="$PROJECT_DIR$/Project2Carusel/lsaran 8.html" />
+        <option value="$PROJECT_DIR$/Project2Carusel/Sorting.html" />
+        <option value="$PROJECT_DIR$/Project2Carusel/Qnnutyun 2ACA.html" />
+        <option value="$PROJECT_DIR$/../../jsExam/jsarr.js" />
+        <option value="$PROJECT_DIR$/../../JS-ACA HomeWork/Qnnutyun 2ACA.html" />
+        <option value="$PROJECT_DIR$/../../jsExam/recursive.html" />
+        <option value="$PROJECT_DIR$/../../CV/CV.html" />
+        <option value="$PROJECT_DIR$/../../CV/cv.css" />
+        <option value="$PROJECT_DIR$/../../jsExam/ToDoList.html" />
+        <option value="$PROJECT_DIR$/../../JS-ACA HomeWork/lsaran 8.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="260" />
+    <option name="width" value="1662" />
+    <option name="height" value="1033" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../JS-ACA HomeWork/lsaran 8.html" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c24dc602-cf75-4430-a351-b885f134e46b" name="Default" comment="" />
+      <created>1581884649551</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581884649551</updated>
+      <workItem from="1581884651925" duration="23326000" />
+      <workItem from="1582042924403" duration="32623000" />
+      <workItem from="1582202428909" duration="43843000" />
+      <workItem from="1582426002276" duration="26825000" />
+      <workItem from="1582624186780" duration="49070000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="175687000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="208" y="0" width="1329" height="826" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.27134988" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32907802" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../../jsExam/recursive.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1292">
+          <caret line="76" column="39" selection-start-line="76" selection-start-column="39" selection-end-line="76" selection-end-column="39" />
+          <folding>
+            <element signature="e#22809#22841#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project2Carusel/lsaran 8.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project2Carusel/Qnnutyun 2ACA.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5695">
+          <caret line="335" selection-start-line="335" selection-end-line="335" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project2Carusel/Sorting.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../jsExam/jsarr.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57766">
+          <caret line="3398" column="14" selection-start-line="3398" selection-start-column="14" selection-end-line="3398" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../jsExam/recursive.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1292">
+          <caret line="76" column="39" selection-start-line="76" selection-start-column="39" selection-end-line="76" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../jsExam/Karevor/Bubbling.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2346">
+          <caret line="138" column="52" selection-start-line="138" selection-start-column="23" selection-end-line="138" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../jsExam/Karevor/sevagir.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="55" selection-start-line="19" selection-start-column="55" selection-end-line="19" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project2Carusel/carusel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1207">
+          <caret line="71" column="4" lean-forward="true" selection-start-line="71" selection-start-column="4" selection-end-line="71" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../jsExam/jsarr.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57256">
+          <caret line="3368" column="6" selection-start-line="3368" selection-start-column="6" selection-end-line="3368" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project2Carusel/CARUSEL2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project2Carusel/lsaran 8.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/carusel.html" />
+    <entry file="file://$PROJECT_DIR$/VerchinCarusel.html" />
+    <entry file="file://$PROJECT_DIR$/carusel.js" />
+    <entry file="file://$PROJECT_DIR$/carusel.css" />
+    <entry file="file://$PROJECT_DIR$/CARUSEL2.html" />
+    <entry file="file://$PROJECT_DIR$/carusel.html" />
+    <entry file="file://$PROJECT_DIR$/carusel.css" />
+    <entry file="file://$PROJECT_DIR$/carusel.js" />
+    <entry file="file://$PROJECT_DIR$/carusel1.js" />
+    <entry file="file://$PROJECT_DIR$/../../jsExam/CARUSEL2.html" />
+    <entry file="file://$PROJECT_DIR$/CaruselJQuery.html" />
+    <entry file="file://$PROJECT_DIR$/carusel1.js" />
+    <entry file="file://$PROJECT_DIR$/../Project2CaruselFlowers/CaruselJQuery.html" />
+    <entry file="file://$PROJECT_DIR$/../../jsExam/sevagir.html" />
+    <entry file="file://$PROJECT_DIR$/../../jsExam/Bubbling.html" />
+    <entry file="file://$PROJECT_DIR$/../../jsExam/sevagir1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="700" lean-forward="true" selection-start-line="700" selection-end-line="700" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VerchinCarusel.html" />
+    <entry file="file://$PROJECT_DIR$/carusel.html" />
+    <entry file="file://$PROJECT_DIR$/carusel.css" />
+    <entry file="file://$PROJECT_DIR$/carusel.js" />
+    <entry file="file://$PROJECT_DIR$/CARUSEL2.html" />
+    <entry file="file://$PROJECT_DIR$/../../jsExam/Karevor/Bubbling.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2346">
+          <caret line="138" column="52" selection-start-line="138" selection-start-column="23" selection-end-line="138" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project2Carusel/ManeCarusel.html" />
+    <entry file="file://$PROJECT_DIR$/Project2Carusel/CARUSEL2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project2Carusel/carusel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="994">
+          <caret line="71" column="4" selection-start-line="71" selection-start-column="4" selection-end-line="71" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../jsExam/Karevor/sevagir.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="55" selection-start-line="19" selection-start-column="55" selection-end-line="19" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project2Carusel/lsaran 8.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project2Carusel/Sorting.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project2Carusel/Qnnutyun 2ACA.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="237" column="4" selection-start-line="237" selection-start-column="4" selection-end-line="237" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../jsExam/jsarr.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="3464" column="5" selection-start-line="3464" selection-start-column="5" selection-end-line="3464" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../JS-ACA HomeWork/Qnnutyun 2ACA.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="810" lean-forward="true" selection-start-line="810" selection-end-line="810" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../CV/cv.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-387">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../CV/CV.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="131" column="24" selection-start-line="131" selection-start-column="24" selection-end-line="131" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../jsExam/recursive.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="436">
+          <caret line="1612" column="10" selection-start-line="1609" selection-start-column="3" selection-end-line="1612" selection-end-column="10" />
+          <folding>
+            <element signature="e#22809#22841#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../jsExam/ToDoList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1427">
+          <caret line="169" lean-forward="true" selection-start-line="169" selection-end-line="169" />
+          <folding>
+            <element signature="e#1562#2256#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../JS-ACA HomeWork/lsaran 8.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="62" column="7" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

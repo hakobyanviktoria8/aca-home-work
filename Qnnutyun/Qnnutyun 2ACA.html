@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+       *{font-size: 20px;
+            padding-left: 20px}
+        h1{
+            font-size: 30px;
+            background-color: #fad7fa;
+        }
+    </style>
+</head>
+<body>
+<h1>Functions</h1>
+<pre><code>
+    function showMessage() {
+      let message = "Hello, I'm JavaScript!"; // local variable
+      alert( message );
+    }
+    showMessage(); // Hello, I'm JavaScript!
+    alert( message ); // <-- Error! The variable is local to the function
+    <hr>
+    let userName = 'John';
+    function showMessage() {
+      let message = 'Hello, ' + userName;
+      alert(message);
+    }
+    showMessage(); // Hello, John
+    <hr>
+    let userName = 'John';
+    function showMessage() {
+      userName = "Bob"; // (1) changed the outer variable
+      let message = 'Hello, ' + userName;
+      alert(message);
+    }
+    alert( userName ); // John before the function call
+    showMessage();
+    alert( userName ); // Bob, the value was modified by the function
+    <hr>
+    let userName = 'John';
+    function showMessage() {
+      let userName = "Bob"; // declare a local variable
+      let message = 'Hello, ' + userName; // Bob
+      alert(message);
+    }
+    // the function will create and use its own userName
+    showMessage();
+    alert( userName ); // John, unchanged, the function did not access the outer variable
+    <hr>
+    function showMessage(from, text) {
+      from = '*' + from + '*'; // make "from" look nicer
+      alert( from + ': ' + text );
+    }
+    let from = "Ann";
+    showMessage(from, "Hello"); // *Ann*: Hello
+    // the value of "from" is the same, the function modified a local copy
+    alert( from ); // Ann
+    <hr>
+    //Empty Array
+    function doNothing() { /* empty */ }
+    alert( doNothing() === undefined ); // true
+    <hr>
+    //Prime Number
+    function showPrimes(n) {
+      nextPrime: for (let i = 2; i < n; i++) {
+        for (let j = 2; j < i; j++) {
+          if (i % j == 0) continue nextPrime;
+        }
+        alert( i ); // a prime
+      }
+    }
+    <hr>
+    //^^^^^^^^^^^^^^^^^^^^
+function f(n) {
+    for(let i=2; i < n ; i++){
+        if(n % i/2 === 0){return ("parz che " + n)}
+        else{return ( "parz E " + n)}
+    }
+}
+console.log(f(7));  //parz E 7
+console.log(f(72));  //parz che 72
+</code></pre>
+<hr>
+<h2>function exprisstion</h2>
+<pre><code>
+    // Function Declaration
+    function sum(a, b) {
+        return a + b;
+    }
+
+    // Function Expression
+    let sum = function(a, b) {
+      return a + b;
+    };
+    <hr>
+    sayHi("John"); // Hello, John
+    function sayHi(name) {
+      alert( `Hello, ${name}` );
+    }
+
+    sayHi("John"); // error!
+    let sayHi = function(name) {  // (*) no magic any more
+      alert( `Hello, ${name}` );
+    };
+</code></pre>
+<hr>
+<h2>arrow functions</h2>
+<pre><code>
+    let double = n => n * 2;
+    // roughly the same as: let double = function(n) { return n * 2 }
+    alert( double(3) ); // 6
+    <hr>
+    let sayHi = () => alert("Hello!");
+    sayHi();
+    <hr>
+    let sum = (a, b) => {  // the curly brace opens a multiline function
+      let result = a + b;
+      return result; // if we use curly braces, then we need an explicit "return"
+    };
+    alert( sum(1, 2) ); // 3
+    <hr>
+    let fanc=(a,b)=>{
+        return a+b
+    };
+    console.log(fanc(2,4))  //6
+
+</code></pre>
+<hr>
+<h1>Recursive</h1>
+<pre><code>
+function fib(n) {
+  return n <= 1 ? n : fib(n - 1) + fib(n - 2);
+}
+alert( fib(3) ); // 2
+alert( fib(7) ); // 13
+    <hr>
+function factorial(n) {
+  return !n ? 1 : n * factorial(n - 1);
+}
+alert( factorial(5) ); // 120
+    <hr>
+function sumTo(n) {
+  if (n == 1) return 1;
+  return n + sumTo(n - 1);
+}
+alert( sumTo(100) );
+    <hr>
+function pow(x, n) {
+  return n == 1 ? x : x * pow(x, n - 1);
+}
+    pow(5,3)//125
+    <hr>
+    function length(str) {
+        if (str.length === 0) return 0;
+        else return 1 + length(str.slice(1))
+    }
+    console.log(length("hello out"))//9
+    <hr>
+    function sum(n) {
+        return !n ? n : n + sum(n-1)
+    }
+    console.log(sum(5))
+    <hr>
+    function reverse(str) {
+        if (!str) return "";
+        return str.slice(-1) + reverse(str.slice(0, -1));
+    }
+    console.log(reverse("hello"))
+    <hr>
+     function fiboN(n) {
+        if(n<=1)return n;
+        else return fiboN(n-1)+ fiboN(n-2)
+    }
+    console.log(fiboN(3));
+    <hr>
+    function getLength(arr) {
+        return arr.reduce((a,b) => Array.isArray(b) ? a + getLength(b) : 	a + 1, 0)
+    }
+    console.log(getLength([1, [2,3],[9]]));  //4
+    console.log(getLength([1, [2,3]]));    //3
+    console.log(getLength([1, []]));     //1
+    <hr>
+    function fact(arr) {    //arr.reduce((a,b)=>a+b)
+        return  arr.length ?   arr[0] +fact(arr.slice(1)) : 0
+    }
+    console.log(fact([]));
+    console.log(fact([1,-1,35]));
+    console.log(fact([1,10,12,3]))
+    <hr>
+function pi(str,word) {
+    str = str.toLowerCase().replace("pi","3.14");
+    if(str.includes("pi")){
+        return pi(str,word)
+    }
+    return str
+}
+console.log(pi("Picsart pipelines","pi"))
+    <hr>
+    function reverse(num) {
+        return num > 10 ? (num % 10) * Math.pow(10,Math.floor(Math.log10(num))) +
+            reverse(Math.floor(num / 10)): num
+    }
+    console.log(reverse(7135));
+    <hr>
+function reverse(num) {
+        return num > 10 ? (num % 10) * Math.pow(10,Math.floor(Math.log10(num))) +
+            reverse(Math.floor(num / 10)): num
+    }
+    console.log(reverse(7135));
+    <hr>
+    function findOdd(num) {
+        if(num % 10 % 2 !== 0){
+            if (num < 10) return true;
+            return findOdd(Math.floor(num / 10));
+        } else {
+            return false
+        }
+    }
+    console.log(findOdd(211133));
+    console.log(findOdd(7791));
+    console.log(findOdd(5));
+    console.log(findOdd(22));
+    <hr>
+    function findEven(num) {
+        if(num % 10 % 2 === 0){
+            if (num < 10) return true;
+            return findEven(Math.floor(num / 10));
+        } else {
+            return false
+        }
+    }
+    console.log(findEven(211133));
+    console.log(findEven(22));
+    <hr>
+     function sumDigit(n) {
+        n = +[...n.toString()].reduce((a,b)=> +a + +b);
+        if(n > 10){
+            return n % 10 + sumDigit(Math.floor(n / 10))
+        } else {
+            return n
+        }
+    }
+    console.log(sumDigit(522333));
+    console.log(sumDigit(999999999999));
+    console.log(sumDigit(14));
+<hr>
+ function howManyTimes(num) {
+        if(num===0){
+            return "Edbit"
+        }
+       return "Ed" + rec(num) +"bit";
+    }
+    function rec(n, a = "") {
+        if (n === 1){
+            return a = "a"
+        } else {
+            return a += "a" + rec(n-1,a)
+        }
+    }
+ console.log(howManyTimes(5))
+
+</code></pre>
+<h1>hosting</h1>
+<pre><code>
+    <h3>There are two main differences of var compared to let/const: <br>
+var variables have no block scope, they are visible minimum at the function level. <br>
+var declarations are processed at function start (script start for globals).</h3>
+function sayHi() {
+  var phrase = "Hello"; // local variable, "var" instead of "let"
+ alert(phrase); // Hello
+}
+sayHi();
+alert(phrase); // Error, phrase is not defined
+    <hr>
+    function sayHi() {
+        if (true) {
+            var phrase;
+        }
+        alert(phrase); // undefined
+        phrase= "Hello";
+    }
+    sayHi();
+    alert(phrase); //ReferenceError: phrase is not defined
+<hr>
+    function sayHi() {
+        if (true) {
+            let phrase;
+        }
+        alert(phrase); // ReferenceError: phrase is not defined
+        phrase= "Hello";
+    }
+    sayHi();
+    alert(phrase); //ReferenceError: phrase is not defined
+<hr>
+    function sayHi() {
+        phrase = "Hello"; // (*)
+        if (false) {
+            var phrase;
+        }
+        alert(phrase);//hello
+    }
+    sayHi();
+    <hr>
+    //սահմանումը հօստ անումա,վերագրումը չէ
+function sayHi() {
+  alert(phrase);
+  var phrase = "Hello";
+}
+sayHi();//undefined
+    <hr>
+    console.log(myName);    //undefined
+    var myName = 'Sunil';
+    <hr>
+    var myName;
+    console.log(myName);     //undefined
+    myName = "Sam";
+    <hr>
+    function hey() {
+    console.log('hey ' + myName);
+    }
+    hey();       //hey undefined
+    var myName = 'Sunil';
+    <hr>
+    function hey() {
+    console.log('hey ' + myName);
+    }
+    let myName;
+    hey();       //hey undefined
+    myName = 'Sunil';
+    <hr>
+    console.log("1a", myName1); // undefined
+    if (1) {
+    console.log("1a", myName1); // undefined
+    var myName1 = 'Sunil';
+    }
+    <hr>
+    console.log('2a', myName2); // error: myName2 is not defined
+    if (1) {
+    console.log('2b', myName2); // undefined
+    let myName2 = 'Sunil';
+    }
+    <hr>
+    console.log('3a', myName3); // error: myName3 is not defined
+    if (1) {
+    console.log('3b', myName3); // undefined
+    const myName3 = 'Sunil';
+    }<hr>
+    <h2>hosting example</h2>
+    function hoist() {
+        a = 20;
+        var b = 100;
+    }
+    hoist();
+    console.log(a);  //Global 20
+    console.log(b);   //ReferenceError
+<hr>
+      console.log(hoist);
+      var hoist = 'The variable has been hoisted.';// undefined
+    let hoist = 'The variable has been hoisted.';//ReferenceError:
+<hr>
+    let hoist;  //undefined
+    var hoist; //undefined
+    console.log(hoist);
+    hoist = 'The variable has been hoisted.';
+    <hr>
+    function getCircumference(radius) {
+        // circumference = 3*radius;   //6 global
+        console.log(circumference);
+        circumference = 3*radius;   //ReferenceError:
+    }
+    getCircumference(2)
+</code></pre>
+<hr>
+<h2>Function hosting</h2>
+<pre><code>
+hoisted(); // Output: "This function has been hoisted."
+function hoisted() {
+  console.log('This function has been hoisted.');
+};
+    <hr>
+    expression(); // "TypeError: expression is not a function
+    var expression = function() {
+        console.log('Will this work?');
+    };
+<hr>
+</code></pre>
+<hr>
+<h1>scop</h1>
+<pre><code>
+function sum(a) {
+  return function(b) {
+    return a + b; // takes "a" from the outer lexical environment
+  };
+}
+alert( sum(1)(2) ); // 3
+alert( sum(5)(-1) ); // 4
+</code></pre>
+<script>
+    //function
+    // function sayHi() {
+    //     alert( "Hello" );
+    // }
+    //function expristion
+    // let sayHi = function() {
+    //     alert( "Hello" );
+    // };
+    // function sum(a, b) {
+    //     return a + b;
+    // }
+
+    //arrow func
+// let fanc=(a,b)=>{
+//     return a+b
+// };
+// console.log(fanc(2,4))
+
+    // hosting
+    //
+    // console.log(myName);    //undefined
+    // var myName = 'Sunil';
+    //
+    // var myName;
+    // console.log(myName);     //undefined
+    // myName = "Sam";
+    //
+    // function hey() {
+    //     console.log('hey ' + myName);
+    // }
+    // hey();       //hey undefined
+    // var myName = 'Sunil';
+    //
+    // function hey() {
+    //     console.log('hey ' + myName);
+    // }
+    // let myName;
+    // hey();       //hey undefined
+    // myName = 'Sunil';
+    //
+    // console.log("1a", myName1); // undefined
+    // if (1) {
+    //     console.log("1a", myName1); // undefined
+    //     var myName1 = 'Sunil';
+    // }
+    //
+    // console.log('2a', myName2); // error: myName2 is not defined
+    // if (1) {
+    //     console.log('2b', myName2); // undefined
+    //     let myName2 = 'Sunil';
+    // }
+    //
+    // console.log('3a', myName3); // error: myName3 is not defined
+    // if (1) {
+    //     console.log('3b', myName3); // undefined
+    //     const myName3 = 'Sunil';
+    // }
+//sevagir
+//     function makeFunc() {
+//         var name = 'Mozilla';
+//         function displayName() {
+//             alert(name);
+//         }
+//         return displayName;
+//     }
+//
+//     var myFunc = makeFunc();
+//     myFunc();
+//     let myName;
+//     console.log(myName);     //undefined
+//     myName = "Sam";
+
+
+
+    // function getMaxSubSum(arr) {
+    //     let maxSum = 0; // if we take no elements, zero will be returned
+    //
+    //     for (let i = 0; i < arr.length; i++) {
+    //         let sumFixedStart = 0;
+    //         for (let j = i; j < arr.length; j++) {
+    //             sumFixedStart += arr[j];
+    //             maxSum = Math.max(maxSum, sumFixedStart);
+    //         }
+    //     }
+    //
+    //     return maxSum;
+    // }
+    //
+    // console.log( getMaxSubSum([-1, 2, 3, -9]) ); // 5
+    // function l(){alert(num)}
+    // l();
+    // let num=4;
+    // l();
+    // var message = "Hello";
+    // console.log(message);
+    //
+    // // show another message
+    // let message = "Goodbye"; // Error: variable already declared
+    // console.log(message);
+
+    // function f() {
+    //     var value = 123;
+    //
+    //     return function() {
+    //         console.log(value);
+    //     }
+    // }
+    // f();
+    // let g = f(); // while g function exists, the value stays in memory
+
+    // g = null;
+    // f()
+
+    // let name = "John";
+    //
+    // function sayHi() {
+    //     alert("Hi, " + name);
+    // }
+    //
+    // // name = "Pete";
+    //
+    // sayHi();
+
+    // function makeWorker() {
+    //     let name = "Pete";
+    //
+    //     return function() {
+    //         alert(name);
+    //     };
+    // }
+    //
+    // let name = "John";
+    //
+    // // create a function
+    // let work = makeWorker();
+    //
+    // // call it
+    // work(); // what will it show?
+
+
+    // function sayHi() {
+    //     if (true) {
+    //         let phrase;
+    //     }
+    //     alert(phrase); // undefined
+    //     phrase= "Hello";
+    // }
+    // sayHi();
+    // alert(phrase); //ReferenceError: phrase is not defined
+
+    // function sayHi() {
+    //     phrase = "Hello";
+    //
+    //     alert(phrase);
+    //
+    //     let phrase;
+    // }
+    // sayHi();
+
+    // function sayHi() {
+    //     phrase = "Hello98"; // (*)
+    //     // if (false) {
+    //     //     let phrase;
+    //     // }
+    //     console.log(phrase);//hello
+    // }
+    // sayHi();
+
+    // function hoist() {
+    //     a = 20;
+    //     var b = 100;
+    // }
+    // hoist();
+    // console.log(a);  //Global 20
+    // console.log(b);   //ReferenceError
+
+    // console.log(hoist);
+    // // var hoist = 'The variable has been hoisted.';// undefined
+    // let hoist = 'The variable has been hoisted.';//ReferenceError:
+
+    // let hoist;  //undefined
+    // // var hoist; //undefined
+    // console.log(hoist);
+    // hoist = 'The variable has been hoisted.';
+
+
+    // function hoist() {
+    //     console.log(message);
+    //     var message='Hoisting is all the rage!'
+    // }
+    // hoist();
+
+    // function hoist() {
+    //     var message='Hoisting is all the rage!';
+    //     return (message);
+    // }
+    //
+    // hoist(); // Ouput: Hoisting is all the rage!
+    //
+    // function getCircumference(radius) {
+    //     // circumference = 3*radius;   //6 global
+    //     console.log(circumference);
+    //     circumference = 3*radius;   //ReferenceError:
+    // }
+    // getCircumference(2)
+
+
+    // const PI;
+    // console.log(PI); // Ouput: SyntaxError: Missing initializer in const declaration
+    // PI=3.142;
+
+    // expression(); // "TypeError: expression is not a function
+    // var expression = function() {
+    //     console.log('Will this work?');
+    // };
+
+    // function findEven(num) {
+    //     if(num % 10 % 2 === 0){
+    //         if (num < 10) return true;
+    //         return findEven(Math.floor(num / 10));
+    //     } else {
+    //         return false
+    //     }
+    // }
+    // console.log(findEven(211133));
+    // console.log(findEven(22));
+
+    // function sortOrderViolat(arr,ind = 0) {
+    //     if (arr.length === 1) return -1;
+    //     return arr[0] <= arr[1] ? sortOrderViolat(arr.slice(1), ind + 1) : ind + 1
+    // }
+    // console.log(sortOrderViolat([2, 12, 15, 48, 64]));
+    // console.log(sortOrderViolat([-9, -4, -4, 3, 12, 4, 5]));
+
+    // function sumDigit(n) {
+    //     n = +[...n.toString()].reduce((a,b)=> +a + +b);
+    //     if(n > 10){
+    //         return n % 10 + sumDigit(Math.floor(n / 10))
+    //     } else {
+    //         return n
+    //     }
+    // }
+    // console.log(sumDigit(522333));
+    // console.log(sumDigit(999999999999));
+    // console.log(sumDigit(14));
+
+    // function showMessage(from, text) {
+    //     from = '*' + from + '*'; // make "from" look nicer
+    //     alert( from + ': ' + text );
+    // }
+    // let from = "Ann";
+    // showMessage(from, "Hello"); // *Ann*: Hello
+    // // the value of "from" is the same, the function modified a local copy
+    // alert( from ); // Ann
+
+// function f(n) {
+//     for(let i=2; i<n; i++){
+//         if(n % i/2 === 0){return ("parz che " + n)}
+//         else{return ( "parz E " + n)}
+//     }
+// }
+// console.log(f(7));
+// console.log(f(72));
+//     function sayHi() {
+//         var phrase = "Hello";
+//         alert(phrase);
+//     }
+//     sayHi();
+//     alert(phrase);
+
+    // function sayHi() {
+    //     if (true) {
+    //         let phrase;
+    //     }
+    //     alert(phrase);
+    //     phrase= "Hello";
+    // }
+    // sayHi();
+    // sayHi();
+    // alert(phrase);
+
+    // function sayHi() {
+    //     phrase = "Hello";
+    //     if (false) {
+    //         var phrase;
+    //     }
+    //     alert(phrase);
+    // }
+    // sayHi();
+
+    // function sayHi() {
+    //     alert(phrase);
+    //     var phrase = "Hello";
+    // }
+    // sayHi();
+    // sayHi();
+
+    // console.log(myName);
+    // let myName = 'Sunil';
+    // const myName;
+    //
+    //
+    // console.log(myName);
+    //
+    // myName = "Sam";
+    //
+//     function hey() {
+//         console.log('hey ' + myName);
+//     }
+//
+//     myName = 'Sunil';
+//
+// hey()
+
+    // console.log("1a", myName1);//undefined
+    // if (1) {
+    //     console.log("1a", myName1); //undefined
+    //     var myName1 = 'Sunil';
+    // }
+
+
+    // console.log('2a', myName2);  //ReferenceRrror
+    // if (1) {
+    //     console.log('2b', myName2); //RefError
+    //     let myName2 = 'Sunil';
+    // }
+
+    // console.log('3a', myName3);
+    // if (1) {
+    //     console.log('3b', myName3);
+    //     const myName3 = 'Sunil';
+    // }
+
+    // function hoist() {
+    //     a = 20;
+    //     var b = 100;
+    // }
+    // hoist();
+    // console.log(a);
+    // console.log(b);
+
+    // console.log(hoist);   //undefined
+    // // var hoist = 'The variable has been hoisted.';
+    // let hoist = 'The variable has been hoisted.'; //referenceError
+
+    // let hoist;
+    // var hoist;
+    // console.log(hoist);
+    // hoist = 'The variable has been hoisted.';
+    //
+    //
+    // function getCircumference(radius) {
+    //     circumference = 3*radius;
+    //     console.log(circumference);
+    //     // circumference = 3*radius;
+    // }
+    // getCircumference(2);
+    // Function hosting
+    //
+    // hoisted();
+    // function hoisted() {
+    //     console.log('This function has been hoisted.');
+    // }
+    //
+    //
+    // expression();
+    // expression = function() {
+    //     console.log('Will this work?');
+    // };
+
+
+    // hoisted();
+    // function hoisted() {
+    //     console.log('This function has been hoisted.');
+    // }
+
+
+    // expression();
+    // var expression = function() {
+    //     console.log('Will this work?');
+    // };
+
+    //
+    // function sum(n) {
+    //     return !n ? 0 : n + sum(n-1)
+    // }
+    // console.log(sum(5))
+    // function sum(n) {
+    //     return !n ? n : n + sum(n-1)
+    // }
+    // console.log(sum(5))
+
+//     function pow(x, n) {
+//         return !n ? 1 : x * pow(x, n - 1);
+//     }
+// console.log(pow(2,3))
+
+// function  leng(str) {
+//     return !str.length ? 0 : 1 + leng(str.slice(1))
+// }
+// console.log(leng("Hello"))
+
+// function f(str) {
+//
+//     // return !arr.length ? 0 : 1 + f(arr.slice(1))
+//    return !str.length ? "" : str.slice(-1) + f(str.slice(0,-1));
+//
+// }
+// console.log(f("hello"))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

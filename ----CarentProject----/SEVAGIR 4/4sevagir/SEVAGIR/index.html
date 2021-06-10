@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h1,h2{
+            text-align: center;
+        }
+        .constructor{
+            width: 700px;
+            height: 500px;
+            border: 1px solid;
+            margin: 20px auto;
+            position: relative;
+        }
+        .btn{
+            width: 150px;
+            padding: 10px;
+            font-size: 20px;
+            position: absolute;
+            top: 240px;
+            left: 170px;
+        }
+        #student{
+            left: 370px;
+        }
+        /*program*/
+        #program{
+            width: 70%;
+            margin: 100px auto;
+            height: 60%;
+            border: 1px solid;
+            display: none;
+            background-color: gainsboro;
+            font-size: 30px;
+            position: relative;
+        }
+        #program h2{
+            font-size: 30px;
+        }
+        #program input[type="checkbox"]{
+            width: 25px;
+            height: 25px;
+        }
+        #next,#prev{
+            position: absolute;
+            bottom: 35px;
+            right: 50px;
+            width: 100px;
+            padding: 5px;
+            font-size: 20px;
+        }
+        #prev{
+            left: 50px;
+        }
+        /*table*/
+        #table{
+            width: 75%;
+            margin: 40px auto;
+            font-size: 20px;
+            display: none;
+        }
+        th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        table tr:first-child {
+            width: 30px;
+        }
+        td input{
+            border: none;
+        }
+        caption{
+            font-size: 30px;
+            padding: 10px;
+        }
+        #add{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            font-size: 40px;
+            padding: 0 10px;
+            display: none;
+            right: 20px;
+            top: 20px;
+        }
+        /*.tdNumber{*/
+            /*width: 30px*/
+        /*}*/
+    </style>
+</head>
+<body>
+<h1>... LIBRARY ...</h1>
+<div class="constructor">
+<button class="btn" id="teacher">Teacher</button>
+<button class="btn" id="student">Student</button>
+    <!--program-->
+    <div id="program">
+        <h2>Select the program</h2>
+        <pre>
+    HTML:  <input type="checkbox">    CSS:   <input type="checkbox">
+    JS:    <input type="checkbox">    PHP:   <input type="checkbox">
+    OOP:   <input type="checkbox">    MySQL: <input type="checkbox">
+        </pre>
+        <button id="next">Next</button>
+        <button id="prev">Prev</button>
+    </div>
+    <!--table db-->
+    <button id="add">+</button>
+
+    <table id="table">
+        <caption>Students Information</caption>
+        <tr>
+            <th>N</th>
+            <th>Full Name</th>
+            <th>Program</th>
+            <th>Level</th>
+            <th>Grade</th>
+        </tr>
+        <tr id="trAdd">
+            <td><input type="number" style="width: 30px" min="1"></td>
+            <td><input type="text"></td>
+            <td>
+                <select id="programSelect">
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <option value="JS">JS</option>
+                    <option value="OOP">OOP</option>
+                    <option value="PHP">PHP</option>
+                    <option value="MySQL">MySQL</option>
+                </select>
+            </td>
+            <td>
+                <select id="levelSelect">
+                    <option value="one">1</option>
+                    <option value="two">2</option>
+                    <option value="three">3</option>
+                </select>
+            </td>
+            <td>
+                <input type="number" min="40" max="100" step="5" style="width: 100px">
+            </td>
+        </tr>
+        
+    </table>
+</div>
+<script>
+    teacher.onclick=function () {
+        program.style.display="block";
+        teacher.style.display="none";
+        student.style.display="none";
+    };
+    next.onclick =function () {
+        table.style.display="block";
+        add.style.display="block";
+        program.style.display="none";
+        teacher.style.display="none";
+        student.style.display="none";
+    };
+    add.onclick=function () {
+        table.appendChild(trAdd)
+        // let tr = document.createElement("tr");
+        // let tdNumber = document.createElement("td");
+        // let input = document.createElement("input");
+        // tdNumber.append(input);
+        // tdNumber.classList.add("tdNumber");
+        // tdNumber.setAttribute("type","number");
+        // let tdName = document.createElement("td");
+        // let tdProgram = document.createElement("td");
+        // let tdLevel = document.createElement("td");
+        // let tdGrade = document.createElement("td");
+        // tr.append(tdNumber);
+        // tr.append(tdName);
+        // tr.append(tdProgram);
+        // tr.append(tdLevel);
+        // tr.append(tdGrade);
+        // table.append(tr);
+    }
+</script>
+</body>
+</html>

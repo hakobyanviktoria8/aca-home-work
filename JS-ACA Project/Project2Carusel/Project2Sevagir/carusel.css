@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url("img/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1{
+    font-size: 70px;
+    text-shadow: 5px 3px 5px #ff6fe9;
+    text-align: center;
+    color: #6500ff;
+}
+.container {
+    width: 80%;
+    margin: 8px auto;
+}
+.carousel {
+    border: 1px solid #fad7fa;
+    border-radius: 10px;
+    width: 400px;
+    height: 630px;
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+    position: relative;
+    margin: 8px auto;
+}
+.slider {
+    display: flex;
+    height: 100%;
+    width: 500%;
+    flex-shrink: 0;
+    transition: all 0.7s;
+}
+img {
+    flex-basis: 20%;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -1.5px;
+}
+.right {
+    position: absolute;
+    right: 450px;
+    top: 330px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+.left {
+    position: absolute;
+    left: 450px;
+    top: 330px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+.images {
+    margin: 15px auto;
+    width: 750px;
+}
+.images img{
+    border: 1px solid #fad7fa;
+    border-radius: 5px;
+    margin: 5px;
+    width: 60px;
+    display: inline-block;
+}
+
+.bublle{
+    overflow: hidden;
+}
+.circle{
+    background-image: linear-gradient(white ,#fad7fa , #8724ff);
+    border: 1px solid #fad7fa;
+    border-radius: 50%;
+    position: absolute;
+    opacity: 60%;
+    animation-iteration-count: infinite;
+}
+.circle1{
+    width: 80px;
+    height: 80px;
+    animation-name: circle1;
+    animation-duration: 3s;
+}
+@keyframes circle1 {
+    0%   { bottom: 10px; left: 20px;}
+    100% {bottom: 700px;;left: 20px;}
+}
+.circle2{
+    width: 50px;
+    height: 50px;
+    animation-name: circle2;
+    animation-duration: 2.5s;
+}
+@keyframes circle2 {
+    0%   { bottom: -50px; left: 120px;}
+    100% {bottom: 670px; left: 120px;}
+}
+.circle3{
+    width: 70px;
+    height: 70px;
+    animation-name: circle3;
+    animation-duration: 2s;
+}
+@keyframes circle3 {
+    0%   { bottom: -80px;right: 120px;}
+    100% {bottom: 700px;right: 120px;}
+}
+.circle4{
+    width: 30px;
+    height: 30px;
+    animation-name: circle4;
+    animation-duration: 2.4s;
+    animation-timing-function: linear;
+}
+@keyframes circle4 {
+    0%   {bottom: 20px; right: 50px;}
+    25% {bottom: 150px; right: 80px;}
+    50% {bottom: 300px; right: 50px;}
+    75% {bottom: 450px; right: 80px;}
+    100% {bottom: 600px;right: 50px;}
+}
+.circle5{
+    width: 50px;
+    height: 50px;
+    animation-name: circle5;
+    animation-duration: 3.5s;
+}
+@keyframes circle5 {
+    0%   { bottom: -20px; right: 230px;}
+    100% {bottom: 680px; right: 230px;}
+}
+.circle6{
+    width: 30px;
+    height: 30px;
+    animation-timing-function: linear;
+    animation-name: circle6;
+    animation-duration: 2.5s;
+}
+@keyframes circle6 {
+    0%   { bottom: 20px; right: 300px;}
+    25% {bottom: 150px; right: 280px;}
+    50% {bottom: 300px; right: 250px;}
+    75% {bottom: 450px; right: 280px;}
+    100% {bottom: 700px; right: 300px;}
+}
+.circle7{
+    width: 60px;
+    height: 60px;
+    animation-timing-function: linear;
+    animation-name: circle7;
+    animation-duration: 3s;
+}
+@keyframes circle7 {
+    0%   { bottom: -10px; right: 350px;}
+    25% {bottom: 150px; right: 380px;}
+    50% {bottom: 300px; right: 350px;}
+    75% {bottom: 450px; right: 330px;}
+    100% {bottom: 650px; right: 350px;}
+}
+.circle8{
+    width: 40px;
+    height: 40px;
+    animation-timing-function: linear;
+    animation-name: circle8;
+    animation-duration: 4s;
+}
+@keyframes circle8 {
+    0%   {bottom: 20px; left: 50px;}
+    25% {bottom: 150px; left: 70px;}
+    50% {bottom: 300px; left: 90px;}
+    75% {bottom: 450px; left: 60px;}
+    100% {bottom: 700px; left: 40px;}
+}
+.circle9{
+    width: 40px;
+    height: 40px;
+    animation-timing-function: linear;
+    animation-name: circle9;
+    animation-duration: 3s;
+}
+@keyframes circle9 {
+    0%   {bottom: -20px; left: 340px;}
+    100% {bottom: 650px; right: 400px;}
+}
+.circle10{
+    width: 40px;
+    height: 40px;
+    animation-timing-function: linear;
+    animation-name: circle10;
+    animation-duration: 2s;
+}
+@keyframes circle10 {
+    0%   {bottom: -150px; right: 20px;}
+    100% {bottom: 700px; right: 40px;}
+}

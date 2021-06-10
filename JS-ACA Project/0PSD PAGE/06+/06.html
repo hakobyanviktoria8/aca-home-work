@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>06</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        h1{
+            font-size: 4em;
+        }
+        h2{
+            font-size: 3.3em;
+        }
+        h4{
+            font-size: 1.5em;
+        }
+        p{
+            color: rgb(119, 119, 119);
+        }
+        .row{
+            width: 70%;
+            margin: 0 auto;
+            height: inherit;
+            padding: 10px;
+        }
+        .div1{
+            height: 620px;
+            background: url("Images/div1bg.png") no-repeat;
+            background-size: cover;
+        }
+        .div1 .row1{
+            height: 100px;
+        }
+        .div1 .row2{
+            height: 520px;
+        }
+        .positA{
+            text-align: center;
+            margin: 160px auto;
+        }
+        .button1{
+            width: 30%;
+        }
+        .div2{
+            min-height: 420px;
+            padding-top: 3%;
+        }
+        .div3{
+            background-color: #fafafa;
+            min-height: 440px;
+            padding-top: 3%;
+        }
+        .img3{
+            margin: 10% 3%;
+            width: 230px;
+        }
+        .div4{
+            min-height: 600px;
+        }
+        .div4 .row1{
+            margin: 15% 0;
+        }
+        .div4 .row1 img{
+            margin-bottom: 30px;
+        }
+        .div5{
+            background-color: #fafafa;
+            min-height: 810px;
+        }
+        .div5 .row1{
+            min-height: 220px;
+        }
+        .div5 .row2{
+            min-height: 270px;
+        }
+        .div5 .row3{
+            min-height: 270px;
+        }
+        .div5 img, .div7 .imgP{
+            width: 200px;
+            height: 200px;
+        }
+        .div5 .width{
+            width: 95%;
+            min-height: 180px;
+            position: relative;
+            z-index: 1;
+            top: 10px;
+        }
+        .textZ{
+            position: absolute;
+            z-index: 2;
+            top: 20%;
+            left: 15%;
+            width: 70%;
+        }
+        .div6{
+            min-height: 160px;
+        }
+        .div6 img{
+            margin-top: 20%;
+        }
+        .div7{
+            background-color: #111111;
+            min-height: 730px;
+        }
+         .div7 .row1{
+            min-height: 200px;
+        }
+        .div7 .row2{
+            min-height: 380px;
+        }
+        .div7 .row3{
+            min-height: 150px;
+        }
+        .div7 .row3 p{
+            padding: 2% 10%;
+        }
+        .div8{
+           background-color:  #7690c5;
+            min-height: 640px;
+        }
+        .div8 .row1{
+            min-height: 500px;
+            padding-top: 5%;
+        }
+        .div8 .row2{
+            height: 140px;
+        }
+        /*media lg size*/
+        @media screen and (min-width: 992px) and (max-width: 1200px){
+            h1{
+                font-size: 3em;
+            }
+            h2{
+                font-size: 2.8em;
+            }
+            h3{
+                font-size: 1.5em;
+            }
+            h4{
+                font-size: 1.2em;
+            }
+            .img3{
+                margin: 10% 0;
+                width: 230px;
+            }
+            .div3 .row1{
+                padding: 15px;
+                margin-top: -20px;
+            }
+            .div6{
+                min-height: 130px;
+            }
+            .div6 img{
+                width: 95%;
+            }
+            .div8 .col-lg-8{
+                margin: 3% 20%;
+            }
+        }
+        /*media md size*/
+        @media screen and (min-width: 768px) and (max-width: 992px){
+            .navbar-light .navbar-toggler{
+                background-color: #fafafa;
+            }
+            .navbar{
+                color: #fafafa;
+            }
+            .navbar a{
+                background-color: rgba(52,27,65,0.6);
+                width: 150px;
+            }
+            h1{
+                font-size: 2.5em;
+            }
+            h2{
+                font-size: 2.5em;
+            }
+            h4{
+                font-size: 1em;
+            }
+            .button1{
+                width: 35%;
+            }
+            .col-md-10{
+                margin: 0 auto;
+            }
+            .img2, .img3{
+                margin : 0 20%;
+                width: 220px;
+            }
+            .div4 .row2{
+                margin: 0;
+            }
+            .div5 .img{
+                margin-left: 30%;
+            }
+            .div6 img{
+                margin: 10%;
+                width: 95%;
+            }
+            .div8 h2, .div8 p{
+                text-align: center;
+            }
+        }
+        /*media sm size*/
+        @media screen and (min-width: 576px) and (max-width: 768px){
+            .navbar-light .navbar-toggler{
+                background-color: #fafafa;
+            }
+            .navbar a{
+                background-color: rgba(52,27,65,0.6);
+                width: 130px;
+            }
+            h1{
+                font-size: 2em;
+            }
+            h2{
+                font-size: 2.3em;
+            }
+            h3{
+                font-size: 1.3em;
+            }
+            h4{
+                font-size: 0.8em;
+            }
+            .button1{
+                width: 38%;
+                font-size: 1em;
+            }
+            .img2, .img3{
+                margin : 0 20%;
+            }
+            .div5 .img{
+                margin-left: 20%;
+            }
+            .textS{
+                font-size: 0.8em;
+            }
+            .div6 img{
+                margin: 10%;
+                width: 95%;
+            }
+            .div7 .col-sm-10{
+                margin-left: 12%;
+            }
+            .div8 td{
+                font-size: 0.8em;
+            }
+            .div8 h2, .div8 p{
+                text-align: center;
+            }
+        }
+        /*media smaller size*/
+        @media screen and (max-width: 576px) {
+            .navbar-light .navbar-toggler{
+                background-color: #fafafa;
+            }
+            .navbar a{
+                background-color: rgba(52,27,65,0.6);
+                width: 100px;
+            }
+            h1{
+                font-size: 1.8em;
+            }
+            h2{
+                font-size: 1.5em;
+            }
+            h3{
+                font-size: 1.3em;
+            }
+            h4{
+                font-size: 0.8em;
+            }
+            .button1{
+                width: 55%;
+                font-size: 1em;
+                padding: inherit;
+            }
+            .img2, .img3{
+                width: 60%;
+                margin : 0 15%;
+            }
+            .textS{
+                font-size: 0.8em;
+            }
+            .div5 .img{
+                margin-left: 10%;
+            }
+            .blockquote-footer{
+                font-size: 0.6em;
+            }
+            .div6 img{
+                margin: 10%;
+                width: 95%;
+            }
+            .div8 td{
+                font-size: 0.5em;
+            }
+            .div8 td:nth-child(2n){
+                display: none;
+            }
+            .div8 td:nth-child(2n+1){
+                padding-left: 50px;
+            }
+            .div8 h2, .div8 p{
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="div1 ">
+        <div class="row row1">
+            <div class="col-xl-6 col-lg-4 col-md-6 col-sm-6 col-8">
+                <a href="#"><img src="Images/Logo.png" alt="" class="mt-4"></a>
+            </div>
+            <div class="col-xl-6 col-lg-8 col-md-6 col-sm-6 col-4">
+                <nav class="navbar navbar-expand-lg navbar-light mt-3">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link text-white px-3" href="#">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white px-3" href="#">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white px-3" href="#">Clients</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white px-3" href="#">Team</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white px-3" href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="row row2">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
+                <div class="positA">
+                    <h4 class="text-white text-center">Can you build the website of my dreams?</h4>
+                    <h1 class="text-white text-center text-uppercase">Yup, we can do that.</h1>
+                    <button type="button" class="btn btn-outline-light btn-lg mt-5 button1">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="div2">
+        <div class="row">
+            <div class="col-xl-8 col-lg-8 col-md-10 col-sm-12 ">
+                <h2 class="py-4"><span class="font-weight-light">Web</span> <b>Development</b></h2>
+                <p>Lorem Ipsum is simply dummy text of the ting industry. Lorem Ipsum haprinting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it</p>
+                <p>The to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially</p>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-10 col-sm-12 py-4 ">
+                <img src="Images/Flow Tree-Icon.png" alt="" class="img2">
+            </div>
+        </div>
+    </div>
+    <div class="div3">
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-10 col-sm-12 py-4">
+                <img src="Images/Users-Icon.png" alt="" class="img3">
+            </div>
+            <div class="col-xl-8  col-lg-8 col-md-10 col-sm-12 p-3">
+                <div class="row1">
+                    <h2 class="py-3"><span class="font-weight-light">Identity </span> <b>Branding</b></h2>
+                    <p>Lorem Ipsum is simply dummy text of the ting industry. Lorem Ipsum haprinting and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it</p>
+                    <p>The to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="div4">
+        <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-10 col-sm-12">
+                    <div class="row1">
+                        <img src="Images/Person-Icon.png" alt="" class="float-left mt-3 mb-4 mr-3">
+                        <h3>Branding & Identity</h3>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                        <br>
+                        <img src="Images/iPad-Icon.png" alt="" class="float-left mt-3 mb-4 mr-3">
+                        <h3>Mobile App Development</h3>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                        <br>
+                        <img src="Images/Star-Icon.png" alt="" class="float-left mt-3 mb-4 mr-3">
+                        <h3>UI/UX</h3>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                     </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-10 col-sm-12">
+                    <div class="row1 row2">
+                        <img src="Images/Browser-Icon.png" alt="" class="float-left mt-3 mb-4 mr-3">
+                        <h3>Web & Graphic Design</h3>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                        <br>
+                        <img src="Images/Video-Icon.png" alt="" class="float-left mt-3 mb-4 mr-3">
+                        <h3>Animations</h3>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                        <br>
+                        <img src="Images/Camera.png" alt="" class="float-left mt-3 mb-4 mr-3">
+                        <h3>Photography</h3>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                     </div>
+                </div>
+        </div>
+    </div>
+    <div class="div5">
+        <div class="row row1">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                <h2 class="pt-5 text-center"><span class="font-weight-light">Awesome</span> <b>Clients</b></h2>
+                <p class="text-center">See what nice things our clients said about us.</p>
+            </div>
+        </div>
+        <div class="row row2">
+            <div class="col-xl-3 col-lg-4 col-md-10 col-sm-12">
+                <img src="Images/1.jpg" alt="" class="rounded-circle img-thumbnail img">
+            </div>
+            <div class="col-xl-9 col-lg-8 col-md-10 col-sm-12">
+                <img src="Images/Speak Box.png" alt="" class="width">
+                <blockquote class="blockquote textZ">
+                    <p class="textS">"Various versions have evolved over the years, sometimes by accident dummy text of the printing and typesetting ."</p>
+                    <footer class="blockquote-footer">
+                        Title - Our Awesome Clients
+                    </footer>
+                </blockquote>
+            </div>
+        </div>
+        <div class="row row3">
+            <div class="col-xl-9 col-lg-8 col-md-10 col-sm-12">
+                <img src="Images/Speak Box1.png" alt="" class="width">
+                <blockquote class="blockquote textZ">
+                    <p class="textS">"Various versions have evolved over the years, sometimes by accident dummy text of the printing and typesetting ."</p>
+                    <footer class="blockquote-footer">
+                        Title - Our Awesome Clients
+                    </footer>
+                </blockquote>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-10 col-sm-12">
+                <div class="">
+                    <img src="Images/2.jpg" alt="" class="rounded-circle img-thumbnail float-left img mt-4">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="div6">
+        <div class="row p-3">
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6">
+                <img src="Images/Envato.png" alt="">
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6">
+                <img src="Images/WordPress.png" alt="">
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6">
+                <img src="Images/Tuts+.png" alt="">
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6">
+                <img src="Images/Microlancer copy.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="div7 text-white text-center">
+        <div class="row row1">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mt-4">
+                <h2><span class="font-weight-light">Amazing </span> <b>Team</b></h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+        </div>
+        <div class="row row2">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-10 my-3">
+                <img src="Images/3.jpg" alt="" class="imgP rounded-circle img-thumbnail mb-3">
+                <h5>Kimbery Thompson</h5>
+                <p class="text-white">Marketer</p>
+                    <a href="#"> <img src="Images/Twitter.png" alt=""></a>
+                    <a href="#"> <img src="Images/Facebook.png" alt=""></a>
+                    <a href="#"> <img src="Images/Pinterest.png" alt=""></a>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-10 my-3">
+                <img src="Images/4.jpg" alt="" class="imgP rounded-circle img-thumbnail mb-3">
+                <h5>Rico Massison</h5>
+                <p class="text-white">Coder</p>
+                    <a href="#"> <img src="Images/Twitter.png" alt=""></a>
+                    <a href="#"> <img src="Images/Facebook.png" alt=""></a>
+                    <a href="#"> <img src="Images/Google+.png" alt=""></a>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-10 my-3">
+                <img src="Images/5.jpg" alt="" class="imgP rounded-circle img-thumbnail mb-3">
+                <h5>Uku Mason</h5>
+                <p class="text-white">Graphic Designer</p>
+                    <a href="#"> <img src="Images/Facebook.png" alt=""></a>
+                    <a href="#"> <img src="Images/Pinterest.png" alt=""></a>
+            </div>
+        </div>
+        <div class="row row3">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                <p class="text-white">It is a long it to make a type specimen book established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
+            </div>
+        </div>
+    </div>
+    <div class="div8 text-white">
+        <div class="row row1">
+            <div class="col-xl-6 col-lg-8 col-md-10 col-sm-12">
+                <h2><span class="font-weight-light">Say </span> <b>Hello</b></h2>
+                <p class="text-white">It is a long it to specimen book established fact that a reader will be distracted by the:) </p>
+                <table class="table table-borderless text-white">
+                   <tr>
+                       <td><a href="#"><img src="Images/Mobile-Icon.png" alt=""></a></td>
+                       <td  class="px-0">(416) 555-0000</td>
+                       <td><a href="#"><img src="Images/Mail-Icon.png" alt="" class="ml-3"></a></td>
+                       <td>hello@escape.com</td>
+                   </tr>
+                    <tr>
+                        <td><a href="#"><img src="Images/Twitter-Icon.png" alt=""></a></td>
+                        <td class="px-0">@escape</td>
+                        <td><a href="#"><img src="Images/Facebook-Icon.png" alt="" class="ml-3"></a></td>
+                        <td>facebook.com/escape</td>
+                   </tr>
+                    <tr>
+                        <td><a href="#"><img src="Images/Google+-Icon.png" alt=""></a></td>
+                        <td class="px-0">plus.com/escape</td>
+                        <td><a href="#"><img src="Images/Pinterest-Icon.png" alt="" class="ml-3"></a></td>
+                        <td>pinterest.com/escape</td>
+                   </tr>
+                </table>
+            </div>
+            <div class="col-xl-6 col-lg-8 col-md-10 col-sm-12">
+                <form action="#">
+                    <input type="text" class="form-control mb-3"  placeholder="Your Name *" name="name">
+                    <input type="email" class="form-control mb-3"  placeholder="Your E-mail *" name="email">
+                    <textarea name="" class="form-control " cols="30" rows="8" placeholder="Your Message *"></textarea>
+                </form>
+            </div>
+        </div>
+        <div class="row row2">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                <hr>
+                <p class="text-white text-center">© 2014 Escape by FreebiesXpress • Made In Toronto</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

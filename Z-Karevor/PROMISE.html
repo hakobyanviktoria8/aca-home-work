@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>misht arach</h1>
+<div>
+    <h2>hello new life</h2>
+    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consequuntur cupiditate, debitis earum et facilis hic iusto laudantium natus nesciunt odit pariatur qui quod, repudiandae sapiente similique suscipit, tenetur. Similique.</p>
+</div>
+<script>
+
+    // (function simple () {
+    //     let serviceResponse = new Promise((resolve, reject) => {
+    //         // setTimeout(() => resolve('Success'), 2000);
+    //         setTimeout(() => reject('Success'), 2000);
+    //     });
+    //
+    //     serviceResponse.then((msg) => {
+    //         console.log(`Hello Message is ${msg}`);
+    //     }, () => {
+    //         console.log('oops! its rejected');  //
+    //     });
+    // }());
+
+    // function basic (result) {
+    //     if (!result) {
+    //         return Promise.reject('Failure');
+    //     }
+    //
+    //     return new Promise((resolve, reject) => {
+    //         // Assume that this below data is retrieved from Database which takes 1.6 seconds.
+    //         setTimeout(() => resolve(result), 1600);
+    //     });
+    // }
+    //
+    // module.exports = {
+    //     basic,
+    // };
+    //
+    // function job(callback1, callback2) {
+    //
+    //     setTimeout(function(){
+    //         callback1()},2000);
+    //
+    //     let counter = 1;
+    //
+    //     var timer=setInterval(function(){
+    //         callback2();
+    //         counter++;
+    //         if(counter>3){
+    //             clearInterval(timer)
+    //         }
+    //     },1000)
+    //
+    // }
+    //
+    // module.exports = job;
+
+
+
+
+
+
+
+
+
+
+    // fetch('/article/promise-chaining/user.json')
+    // // Load it as json
+    //     .then(response => response.json())
+    //     // Make a request to GitHub
+    //     .then(user => fetch(`https://api.github.com/users/${user.name}`))
+    //     // Load the response as json
+    //     .then(response => response.json())
+    //     // Show the avatar image (githubUser.avatar_url) for 3 seconds (maybe animate it)
+    //     .then(githubUser => {
+    //         let img = document.createElement('img');
+    //         img.src = githubUser.avatar_url;
+    //         img.className = "promise-avatar-example";
+    //         document.body.append(img);
+    //
+    //         setTimeout(() => img.remove(), 3000); // (*)
+    //     });
+
+
+
+
+
+    // fetch('/article/promise-chaining/user.json')
+    // // .then below runs when the remote server responds
+    //     .then(function(response) {
+    //         // response.text() returns a new promise that resolves with the full response text
+    //         // when it loads
+    //         console.log(response);
+    //         return response.text();
+    //     })
+    //     .then(function(text) {
+    //         // ...and here's the content of the remote file
+    //         console.log(text); // {"name": "iliakan", isAdmin: true}
+    //     });
+
+
+
+
+
+
+
+
+    // let promise = new Promise(function(resolve, reject) {
+    //     // the function is executed automatically when the promise is constructed
+    //
+    //     // after 1 second signal that the job is done with the result "done"
+    //     setTimeout(() => resolve("done"), 1000);
+    // });
+    // console.log(promise)
+
+//
+//
+//
+//
+//     function job1(callback) {
+//         setTimeout(function() {
+//             callback('test 1');
+//         }, 2000);
+//     }
+//
+//     function job2(callback) {
+//         setTimeout(function() {
+//             callback('test 2');
+//         }, 4000);
+//     }
+//     var counter = 0;
+// function doSomething1(){
+//     console.log("doSomething1")
+// }
+// function doSomething2(){
+//     console.log("doSomething2")
+// }
+//     job1(function() {
+//         doSomething1();
+//
+//         counter += 1;
+//
+//         if (counter == 2) {
+//             done();
+//         }
+//     });
+//
+//     job2(function() {
+//         doSomething2();
+//
+//         counter += 1;
+//
+//         if (counter == 2) {
+//             done();
+//         }
+//     });
+//
+//     function done() {
+//         console.log('done');
+//     }
+
+    // let promise = new Promise(function(resolve, reject) {
+    //
+    // });
+    // console.log(promise);  //then,catch,finally,constructor CLLaSSa
+    //
+    // var promise = new Promise(function(resolve, reject) {
+    //     setTimeout(function() {
+    //         resolve('hello world');   //promiseStatus="resolved"
+    //        // [[PromiseValue]]: "hello world"
+    //
+    //     }, 2000);
+    // });
+    // console.log(promise);
+    // promise.then(function(data) {
+    //     console.log(data);
+    // });
+    // console.log(promise);
+
+    // var promise = new Promise(function(resolve, reject) {
+    //     setTimeout(function() {
+    //         resolve('hello world');
+    //     }, 2000);
+    // });
+    //
+    // promise.then(function(data) {
+    //     console.log(data + ' 1');    //hello world 1
+    // });
+    //
+    // promise.then(function(data) {
+    //     console.log(data + ' 2');   //hello world 2
+    // });
+    //
+    // promise.then(function(data) {
+    //     console.log(data + ' 3');   //hello world 3
+    // });
+
+
+    //
+    // var promise = new Promise(function(resolve, reject) {
+    //     setTimeout(function() {
+    //         reject('We are all going to die');
+    //     }, 2000);
+    // });
+    // console.log(promise);
+    // promise.then(function success(data) {
+    //     console.log(data);
+    // }, function error(data) {
+    //     console.error(data);
+    // });
+
+//     //ex1
+//     function job() {
+//         return new Promise(function(resolve,reject){
+//             setTimeout(function(){
+//                 resolve('hello world')
+//             },2000)
+//         })
+//     }
+//     console.log(job());
+//
+// //ex1.1
+//     function job1() {
+//         return new Promise((resolve,reject)=>
+//             setTimeout(()=> resolve('hello world') ,2000)
+//         )
+//     }
+//     console.log(job1())
+//
+//
+// //ex2
+//     function job(data) {
+//         return new Promise(function(resolve,reject){
+//             if(typeof data !== "number") {
+//                 reject("error")
+//             }
+//             if(data%2===1){
+//                 setTimeout(function(){
+//                     resolve('odd')
+//                 },1000)
+//             } else {
+//                 setTimeout(function(){
+//                     reject('even')
+//                 },2000)
+//             }
+//         })
+//     }
+
+    //ex3
+    // var promise = job1();
+    //
+    // promise
+    //     .then(function(data1) {
+    //         console.log('data1', data1); //data1 result of job 1
+    //         return job2();
+    //     })
+    //     .then(function(data2) {
+    //         console.log('data2', data2);  //data2 result of job 2
+    //         return 'Hello world';
+    //     })
+    //     .then(function(data3) {
+    //         console.log('data3', data3);  //data3 Hello world
+    //     })
+    //     .then(function(data4) {
+    //         console.log('data4', data4);  //data4 undefined
+    //     });
+    //
+    // function job1() {
+    //     return new Promise(function(resolve, reject) {
+    //         setTimeout(function() {
+    //             resolve('result of job 1');
+    //         }, 1000);
+    //     });
+    // }
+    //
+    // function job2() {
+    //     return new Promise(function(resolve, reject) {
+    //         setTimeout(function() {
+    //             resolve('result of job 2');
+    //         }, 1000);
+    //     });
+    // }
+
+
+    // function job(state) {
+    //     return new Promise(function(resolve, reject) {
+    //         if (state) {
+    //             resolve('success');
+    //         } else {
+    //             reject('error');
+    //         }
+    //     });
+    // }
+    //
+    // let promise = job(true);
+    //
+    // promise
+    //
+    //     .then(function(data) {
+    //         console.log(data);
+    //
+    //         return job(true);
+    //     })
+    //
+    //     .then(function(data) {
+    //         if (data !== 'victory') {
+    //             throw 'Defeat';
+    //         }
+    //
+    //         return job(true);
+    //     })
+    //
+    //     .then(function(data) {
+    //         console.log(data);
+    //     })
+    //
+    //     .catch(function(error) {
+    //         console.log(error);
+    //
+    //         return job(false);
+    //     })
+    //
+    //     .then(function(data) {
+    //         console.log(data);
+    //
+    //         return job(true);
+    //     })
+    //
+    //     .catch(function(error) {
+    //         console.log(error);
+    //
+    //         return 'Error caught';
+    //     })
+    //
+    //     .then(function(data) {
+    //         console.log(data);
+    //
+    //         return new Error('test');
+    //     })
+    //
+    //     .then(function(data) {
+    //         console.log('Success:', data.message);
+    //     })
+    //
+    //     .catch(function(data) {
+    //         console.log('Error:', data.message);
+    //     });
+
+    Promise.all([
+        new Promise(resolve => setTimeout(() => resolve(1), 3000)), // 1
+        new Promise(resolve => setTimeout(() => resolve(2), 2000)), // 2
+        new Promise(resolve => setTimeout(() => resolve(3), 1000))  // 3
+    ]).then(alert);
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+FRON_END
+HTML
+CSS-Bootstrap,SASS,LES
+Java Script-JQuery,React 
+1.JS-https://coursehunter.net/course/prakticheskiy-javascript
+2.react--https://scrimba.com/p/p7P5Hd/cBv8ruL
+GIT
+
+
+sass tutorial - https://www.youtube.com/watch?v=_a5j7KoflTs
+bootstrapov example- praktika 1
+tik-tak-toe nichan
+JS AJAX veranayel, JS tnayin8,9,
+JS-RegExp- https://www.w3schools.com/jsref/jsref_obj_regexp.asp
+JQueri veranayel(RegExp,keyup)
+
+react- https://scrimba.com/p/p7P5Hd/cBv8ruL
+https://coursehunter.net/course/web-razrabotchik-2019
+https://coursehunter.net/course/veb-razrabotchik-2018-s-nulya-do-mastera
+https://coursehunter.net/course/frilanser-veb-razrabotchik-polnoe-rukovodstvo
+https://coursehunter.net/course/the-web-developer-bootcamp
+
+
+PHP
+https://tutorials.supunkavinda.blog/php/oop-intro

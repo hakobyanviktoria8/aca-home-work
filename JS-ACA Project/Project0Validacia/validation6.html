@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<input type="text" id="fname" value="40">-->
+<div id="grade"></div>
+<script>
+    function changeGread(){
+        let carentGrade=40;
+        let input = document.createElement("input");
+        input.setAttribute("value", "40");
+        input.setAttribute("type", "number");
+        input.setAttribute("min", "40");
+        input.setAttribute("max" ,"100");
+        input.setAttribute("step" ,"5" );
+        grade.append(input);
+        input.onblur=function(){
+            carentGrade= input.value;
+            // console.log(carentGrade)
+            return carentGrade
+        };
+    }
+    console.log(changeGread())
+
+
+    // function changeGread(val){
+    //     let carentGrade=40;
+    //     let input = document.createElement("input");
+    //     input.setAttribute("value", "40");
+    //     input.setAttribute("type", "number");
+    //     input.setAttribute("min", "40");
+    //     input.setAttribute("max" ,"100");
+    //     input.setAttribute("step" ,"5" );
+    //     val.append(input);
+    //     input.onblur=function(){
+    //         carentGrade= input.value;
+    //         // console.log(carentGrade)
+    //         return carentGrade
+    //     };
+    // }
+    // console.log(changeGread());
+
+
+    // console.log(obj.grade);
+    //
+    // let tdGreade = document.querySelector("td #grade");
+    // tdGreade.onclick = function(){
+    //     obj.grade = grade.value;
+    //     console.log(obj.grade);
+    // };
+
+    // function changeGread(val){
+    //     let input = '<input id="grade" type="number" min="40" max="100" step="5" value="40">'; //_'+this.id+';
+    //     val.onchange = function () {
+    //         val.value = input.innerHTML
+    //     }
+    //     // let input = ;
+    //     // lastChild.append(input)
+    // }
+
+
+
+    // input.onchange = function () {
+    //     input.value = input.value;
+    // };
+    // console.log(input.value);
+    // let input = ;
+    // lastChild.append(input)
+
+    // function getFrame(w, h, ch) {
+    //     let bigArr=[];
+    //     for(let i=0; i< h; i++){
+    //         bigArr.push([]);
+    //         for (let j=0;j<w;j++){
+    //           if (i===0) { bigArr[i][j]=ch}
+    //           else if (j===0)  { bigArr[i][j]=ch}
+    //           else if (i===h-1){ bigArr[i][j]=ch}
+    //           else if (j===w-1){ bigArr[i][j]=ch}
+    //           else {bigArr[i][j]=" "}
+    //         }
+    //     }return bigArr.map(x=>x.join(""))
+    // }
+    // console.log(getFrame(4, 5, "#"))
+   // fname.oninput = function() {
+    //     fname.value = this.innerHTML
+    // };
+    // console.log(fname.value)
+</script>
+<!--<script>-->
+    <!--let user={-->
+        <!--fname: "Anna",-->
+        <!--lname: "Bobyg",-->
+        <!--email: "anna@gmail.com",-->
+        <!--bday: "12 : 1 : 1998",-->
+        <!--phone: "098-78-87-98",-->
+        <!--address: "Armenia Yerevan Mhjh2 mkmj23 5gh"-->
+    <!--};-->
+    <!--function validationUser(obj) {-->
+        <!--if(obj.fname === "" || obj.lname === "" || obj.email === ""){-->
+            <!--console.log("Խնդրում եմ լրացնել պարտադիր տվյալները:")-->
+        <!--} else {-->
+           <!--if(/[a-zA-Z]{4,}/.test(obj.fname) &&-->
+               <!--/[a-zA-Z]{4,}/.test(obj.lname) &&-->
+               <!--/\d{2}-\d{2}-\d{4}/.test(obj.phone) &&-->
+                   <!--/\w/) {-->
+
+           <!--}-->
+        <!--}-->
+        <!--console.log(obj.fname)-->
+    <!--}-->
+    <!--validationUser(user)-->
+<!--</script>-->
+</body>
+</html>

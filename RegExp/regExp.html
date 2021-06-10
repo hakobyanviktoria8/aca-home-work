@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let tag = prompt("What tag do you want to find?", "h2");
+    // let regexp = new RegExp(`<${tag}>`);
+    // console.log(regexp)///<h2>/
+
+    // let str = "We will, we will rock you";
+    // // alert( str.match(/we/g) );
+    // let result = str.match(/we/gi); // without flag g
+    //
+    // alert( result[0] );     // We (1st match)
+    // alert( result.length ); // 1
+    //
+    // // Details:
+    // alert( result.index );  // 0 (position of the match)
+    // alert( result.input );
+
+
+    let matches = "JavaScript".match(/HTML/); // = null
+    console.log(matches);
+    if (!matches) { // Error: Cannot read property 'length' of null
+        alert("Error in the line above");
+    }</script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="https://edabit.com/challenge/iwdZiFucR5wkQsFHu">ex2</a>
+<a href="https://edabit.com/challenge/kGLhgwGaLJsCMS7wS">ex3</a>
+<a href="https://edabit.com/challenge/SrCTGbhwPRyHZSAGu">ex4</a>
+<a href="https://edabit.com/challenge/Hgb38yhWGwJCMHbRQ">ex5</a>
+<a href="https://edabit.com/challenge/B48vyMsHdRtu39rfh">ex6</a>
+<a href="https://edabit.com/challenge/o7fs6wQvjfu9iZE2j">ex7</a>
+<a href="https://edabit.com/challenge/Rgr2cba4Hp7kt47BW">ex8</a>
+<a href="https://edabit.com/challenge/aHHyBptSxSfyzbWaX">ex9</a>
+<script>
+    //ex1
+    class Calculator {
+        add = (a,b)=> a+b;
+        subtract = (a,b)=> a-b;
+        multiply = (a,b)=> a*b;
+        divide = (a,b)=> a/b;
+    }
+    let calculator = new Calculator;
+    console.log(calculator.add(5,5));
+    console.log(calculator.subtract(30,5));
+    console.log(calculator.multiply(5,5));
+    console.log(calculator.divide(10,5));
+
+//    ex2
+    class Person {
+        constructor(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        compareAge(other) {
+            return this.age < other.age ? `${other.name} is older than me.` :
+                this.age > other.age ? `${other.name} is younger than me.` :
+                    `${other.name} is the same age as me.`
+        }
+    }
+//    ex3
+    class Employee {
+        constructor (firstname, lastname) {
+            this.firstname = firstname;
+            this.lastname = lastname
+        }
+        get fullname (){
+            return `${this.firstname} ${this.lastname}`
+        }
+        get email (){
+            return `${this.firstname.toLowerCase()}.${this.lastname.toLowerCase()}@company.com`
+        }
+    }
+//    ex4
+    class BasicPlan {
+        static canStream = true;
+        static canDownload = true;
+        static numOfDevices = 1;
+        static hasSD = true;
+        static hasHD = false;
+        static hasUHD = false;
+        static price = '$8.99';
+    }
+    class StandardPlan extends BasicPlan {
+        static hasHD = true;
+        static numOfDevices = 2;
+        static price = '$12.99';
+    }
+    class PremiumPlan extends StandardPlan{
+        static hasUHD = true;
+        static numOfDevices = 4;
+        static price = '$15.99';
+    }
+//    ex5
+    class Rectangle {
+        constructor(sideA,sideB){
+            this.sideA = sideA;
+            this.sideB = sideB;
+        }
+        getArea(){return this.sideA*this.sideB};
+        getPerimeter(){return (this.sideA + this.sideB) *2 };
+    }
+    class Circle {
+        constructor(r){
+            this.r = r;
+        }
+        getArea(){return Math.PI * Math.pow(this.r,2)};
+        getPerimeter(){return 2*Math.PI*this.r};
+    }
+//    ex6
+    // Code Below
+    class Book {
+        constructor( author,published){
+            this.author=author;
+            this.published=published
+        }
+    }
+    class Author {
+        static name = true;
+        static books = true;
+    }
+    class Publisher {
+        static authors = true;
+        static books = true;
+    }
+    class Review {
+        constructor(rating, user){
+            this.rating=rating;
+            this.user=user
+        }
+    }
+//    ex6^^^^^^^^^^^^^^^^^^^^^
+    function Book(author, published) {
+        this.author = author;
+        this.published = published
+    }
+
+    const Author = {
+        name: '',
+        books: '',
+    };
+
+    const Publisher = new function(authors, books) {
+        this.authors = authors;
+        this.books = books
+    };
+
+    class Review {
+        constructor(rating, user) {
+            this.rating = rating;
+            this.user = user
+        }
+    }
+//    ex7
+    class Console {
+        constructor() {
+            this.hist = []
+        }
+
+        log(...args) {
+            let x = args.map(x=>typeof x==="string"?x:
+                typeof x==="object"?JSON.stringify(x):
+                    x.toString()).join('');
+            this.hist.push(x);
+            return x
+        }
+
+        history(range) {
+            let l = range===undefined || range[0]===-1 ? 0 : range[0]-1;
+            let r = Math.min(this.hist.length, 1 + Math.max(l,range===undefined || range.length < 2 ? this.hist.length-1 : range[1]-1))
+            return this.hist.slice(l,r).join('\n')
+        }
+
+        clearHistory() {
+            this.hist = [];
+            return true
+        }
+    }
+//    ex8
+    function primesBelowNum(n) {
+        let arr=[];
+        next: for (let i=2; i<=n; i++){
+            for(let j=2; j<i; j++){
+                if(i % j === 0)
+                    continue next;
+            }arr.push(i)
+        }
+        return arr
+    }
+//    ex8^^^^^^^^^^^^^^^
+    const primesBelowNum = n => {
+        let a = [2];
+        for(i = 3; i <= n; i+=2) {
+            if(a.every(x => i % x !== 0)) {
+                a.push(i)
+            }
+        }
+        return a;
+    };
+//    ex9
+    function primeNumbers(num) {
+        let arr=[2];
+        if(num<=0)return 0;
+        for(let i=3; i<=num; i+=2){
+            if(arr.every(x => i % x !== 0)){
+                arr.push(i)
+            }
+        }return arr.length
+    }
+</script>
+
+</body>
+</html>

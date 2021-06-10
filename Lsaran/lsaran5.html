@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    console.log("__________homeWork4_________ex2_________________________");
+    function vendingMachine(products, money, number) {
+        products = [
+            { number: 1, price: 100, name: 'Orange juice' },
+            { number: 2, price: 200, name: 'Soda' },
+            { number: 3, price: 150, name: 'Chocolate snack' },
+            { number: 4, price: 250, name: 'Cookies' },
+            { number: 5, price: 180, name: 'Gummy bears' },
+            { number: 7, price: 120, name: 'Crackers' },
+            { number: 8, price: 220, name: 'Potato chips' },
+            { number: 9, price: 80,  name: 'Small snack' },
+        ];
+        let coins = [500,200,100,50,20,10], result = [], obj = {};
+        let num = products.map(x => x.number); //[1, 2, 3, 4, 5, 7, 8, 9]
+
+        if (num.indexOf(number) === -1) {
+            console.log("Enter a valid product number")
+        } else {
+            let change = money - products[num.indexOf(number)].price;
+            if(change < 0){
+                console.log("Not enough money for this product")
+            } else {
+                obj.product = products[num.indexOf(number)].name;
+                function factorial(change) {
+                    coins = coins.filter(x => x <= change);//[200,100,50,20,10]
+                    if(change ){
+                        result.push(coins[0]);
+                        return factorial(change - coins[0]);
+                    } else{
+                        return 0
+                    }
+                }
+                factorial(change);
+                obj.change = result ;
+                console.log(obj)
+            }
+        }
+    }
+    vendingMachine(products=undefined ,200,7);
+    vendingMachine(products=undefined ,520,8);
+    vendingMachine(products=undefined, 500, 0);  //Enter a valid product number
+    vendingMachine(products=undefined, 90, 1) ; //Not enough money for this product
+
+    console.log("__________________ex1______________________");
+    function fact1(n) {
+        return n ? n* fact1(n - 1) : 1
+    }
+    console.log(fact1(5));
+
+    console.log("__________________ex2______________________");
+    function fibo(n) {
+        return (n <= 1) ? n : fibo(n - 1) + fibo(n - 2)
+    }
+    console.log(fibo(2));
+    console.log(fibo(3));
+    console.log(fibo(21));
+
+    console.log("__________________ex3______________________");
+    function fact3(arr) {    //arr.reduce((a,b)=>a+b)
+        return  arr.length ?   arr[0] +fact3(arr.slice(1)) : 0
+    }
+    console.log(fact3([]));
+    console.log(fact3([1, -1, 35]));
+    console.log(fact3([1, 10, 12, 3]));
+
+    console.log("__________________ex4______________________");
+    function reverse(num) {
+        return num > 10 ? num % 10 + "" + reverse(Math.floor(num / 10)) : num
+    }
+    console.log(reverse(12345));
+
+    console.log("__________________ex4______________________");
+    function reverse(num) {
+        return num > 10 ? (num % 10) * Math.pow(10,Math.floor(Math.log10(num))) +
+            reverse(Math.floor(num / 10)): num
+    }
+    console.log(reverse(7135));
+
+    console.log("__________________ex4______________________");
+    function revNum(num){
+        num = num.toString();
+        return (num === '') ? '' : revNum(num.substr(1)) + num[0];
+    }
+    console.log(revNum(5432));
+
+    console.log("__________________ex5______________________");
+    function getIndex(n, arr, i = null) {
+        if (i === null){
+            i = arr.indexOf(n);
+            return  getIndex(n, arr, i)
+        } else {
+            return arr.indexOf(n, i+1);
+        }
+    }
+    console.log(getIndex(5, [0, -1, 0, 5, 6, 6, 5, -1, 0, 5, 6]));
+    console.log(getIndex(8, [8, 8, 4, 0, 8, 0, 0, 0, 4]));
+
+    console.log("__________________ex6______________________");
+    function subStrCount(str,s) {
+        return str.includes(s) ? subStrCount(str.slice(str.match(s).index + 2), s) + 1 : 0
+    }
+    console.log(subStrCount('Are var far shared?','ar'));
+    console.log(subStrCount('Facebook looks odd','ook'));
+
+    console.log("__________________ex7______________________");
+    function pi(str,word) {
+        str = str.toLowerCase().replace("pi", "3.14");
+        return str.includes("pi") ? pi(str, word): str
+    }
+    console.log(pi("Picsart pipelines", "pi"));
+
+    console.log("__________________ex8______________________");
+    //    [...str].reverse().join("")===str
+    function  mirrorSymmetricArr(str) {
+        str = [...str];
+        if (str.length){
+            if(str.shift() === str.pop()){
+                mirrorSymmetricArr(str);
+                return true
+            } else {
+                return false
+            }
+        }
+    }
+    console.log(mirrorSymmetricArr("abcdadcba"));
+    console.log(mirrorSymmetricArr("abcddcba"));
+    console.log(mirrorSymmetricArr("abcdabcd"));
+
+    console.log("__________________ex9_ex10 _ex11_homeWork 4-5-6___________________");
+
+    console.log("____________ex12.1____________");
+    function sumDigit(n) {
+        n = +[...n.toString()].reduce((a,b)=> +a + +b);
+        if(n > 10){
+            return n % 10 + sumDigit(Math.floor(n / 10))
+        } else {
+            return n
+        }
+    }
+    console.log(sumDigit(522333));
+    console.log(sumDigit(999999999999));
+    console.log(sumDigit(14));
+    console.log(sumDigit(29));
+
+    console.log("____________ex12.2____________");
+    function digitMoreOne(num) {
+        return num >= 10 ? digitMoreOne(sumDigit2(num)) : num
+    }
+    function sumDigit2(n) {
+        if(n > 10){
+            return n % 10 + sumDigit2(Math.floor(n / 10))
+        } else {
+            return n
+        }
+    }
+    console.log(digitMoreOne(522333));
+    console.log(digitMoreOne(14));
+    console.log(digitMoreOne(29));
+    console.log(digitMoreOne(999999999999));
+</script>
+
+</body>
+</html>
